@@ -1,0 +1,95 @@
+/* 
+  Localizable.strings
+  Shopping
+
+  Created by Mohammed Saleh on 01/01/2025.
+  
+*/
+
+"BlackFont"="Cairo-Bold";
+"SemiBoldFont"="Cairo-SemiBold";
+"RegularFont"="Cairo-Regular";
+
+// lables
+"ContinueLbl"="Continue as a";
+"IAgreeLbl"= "I agree for";
+"EditProfileLbl"="Edit Profile";
+"ChangePasswordLbl"="Change password";
+"OrdersLbl"="Orders";
+"AddressLbl"="Addresses";
+"NameProfileLbl"="Welcome Mohamed !";
+"EditYourProfileLbl"="Edit your profile now.";
+"ChangeYourPasswordLbl"="Change Your password now.";
+"AddCartLbl"="Add to cart";
+"FavoritesLbl"="Favorites";
+"AboutUsLbl"="About us";
+ "ContactUsLbl"="Contact US";
+"LanguageLbl"="English";
+"LocationLbl"="Current location";
+"AddNewAddressLbl"="New Address";
+ "ProductLbl"="Products";
+ "DeliveryLbl"="Delivery cost";
+"SubtotalLbl"="Subtotal";
+"TotalLbl"="Total";
+"PromoCodeLbl"="Do you have promo code ?";
+"ApplyLbl"="Apply";
+ "PaymentMethodLbl"="Select payment method";
+ "PayLbl"="Pay";
+// Buts
+"ForgotPasswordBut"="Forget Password?";
+"LoginBut"="Login";
+"RegisterBut"="Register";
+"GustBut"="Guest";
+"TermsBut"="Terms &";
+"ConditionsBut"="Conditions";
+"LogoutBut"="logout";
+"SaveBut"="Save";
+"AddCartBut"="Add to cart";
+"SendBut"="Send";
+
+// TextFileds
+"emailOrMobileTF"="Email or Mobile";
+"passwordTF"="Password";
+"nameTF"="Name";
+"emailTF"="Email";
+"mobileTF"="Mobile";
+"confirmPasswordTF"="Re type password";
+"oldPasswordTF"="Old Password";
+"newPasswordTF"="New Password";
+"AddressNameTF"="Address Name";
+"CityNameTF"="City *";
+"AreaTF"="Area *";
+"BlockTF"="Block *";
+"StreetTF"="Street *";
+"BuildingTF"="Building no./name *";
+"PaciNumberTF"="PACI Number";
+"FloorTF"="Floor *";
+"ApartmentNumberTF"="Apartment number *";
+"AvenueTF"="Avenue";
+"AddressInDetailsTF"="Address In Details";
+"PhoneRecipientNUmberTF"="Phone Recipient Number";
+
+
+// Alerts
+"ErrorAlert"="Error";
+"PleaseFillAllFieldsAlert"="Please fill all fields";
+"PasswordDoesNotMatchAlert"="Password does not match";
+"YouMastAgreeToTermsAndConditionsAlert"="You mast agree to terms and conditions";
+"EmailOrPasswordIsEmptyAlert"="Email or Password is empty";
+
+// Titls
+ "HomeTitle"="Home";
+"CategoriesTitle"="Categories";
+ "ProductsTitle"="Products";
+"CartTitle"="Cart";
+ "CheckoutTitle"="Checkout";
+ "NewAddressTitle"="New Address";
+"OffersTitle"="Offers";
+"AccountTitle"="Account";
+ "EditProfileTitle"="Edit Profile   ";
+ "OrdersTitle"="Orders";
+"AddressesTitle"="Addresses";
+"FavoritesTitle"="Favorites";
+"AboutUsTitle"="About us";
+ "ContactUsTitle"="Contact US";
+"ChangePasswordTitle"="Change password";

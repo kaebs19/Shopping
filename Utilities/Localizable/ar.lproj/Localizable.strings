@@ -1,0 +1,96 @@
+/* 
+  Localizable.strings
+  Shopping
+
+  Created by Mohammed Saleh on 01/01/2025.
+  
+*/
+"BlackFont"="Cairo-Bold";
+"SemiBoldFont"="Cairo-SemiBold";
+"RegularFont"="Cairo-Regular";
+
+// lables
+"ContinueLbl"="الاستمرار كا ";
+"IAgreeLbl"= "انا موافق على";
+"EditProfileLbl"="تعديل ملف شخصي";
+"ChangePasswordLbl"="تغير كلمة السر";
+"OrdersLbl"="طلبات";
+"AddressLbl"="العناوين";
+"NameProfileLbl"="مرحبا محمد !";
+"EditYourProfileLbl"="قم بتعديل ملفك الشخصي الآن.";
+"ChangeYourPasswordLbl"="قم بتغيير كلمة المرور الخاصة بك الآن.";
+"AddCartLbl"="أضافة الي السلة";
+"FavoritesLbl"="مفضلات";
+"AboutUsLbl"="حول التطبيق";
+ "ContactUsLbl"="أتصل بنا";
+"LanguageLbl"="العربية";
+"LocationLbl"="الموقع الحالي";
+"AddNewAddressLbl"="عنوان جديد";
+"ProductLbl"="المنتجات";
+"DeliveryLbl"="تكلفة التوصيل";
+"SubtotalLbl"="الإجمالي الفرعي";
+"TotalLbl"="الإجمالي";
+"PromoCodeLbl"="هل لديك رمز ترويجي؟";
+"ApplyLbl"="تطبيق";
+"PaymentMethodLbl"="اختر طريقة الدفع";
+"PayLbl"="ادفع";
+```
+
+// Buttions
+"ForgotPasswordBut"="هل نسيت كلمة السر ؟";
+"LoginBut"="تسجيل دخول";
+"RegisterBut"=" حساب جديد";
+"GustBut"="ضيف";
+"TermsBut"="شروط &";
+"ConditionsBut"="الأحكام";
+"LogoutBut"="تسجيل خروج";
+"SaveBut"="حفظ";
+"AddCartBut"="أضافة الي السلة";
+"SendBut"="إرسال";
+
+// TextFileds
+"emailOrMobileTF"="البريد او الجوال";
+"passwordTF"="كلمة المرور";
+"nameTF"="الأسم";
+"emailTF"="البريد الأكتروني";
+"mobileTF"="الجوال";
+"confirmPasswordTF"="اعد كتابة كلمة المرور";
+"oldPasswordTF"="كلمة المرور القديمة؟";
+"newPasswordTF"="كبمة المرور الجديدة";
+"AddressNameTF"="اسم العنوان";
+"CityNameTF"="المدينة *";
+"AreaTF"="المنطقة *";
+"BlockTF"="القطعة *";
+"StreetTF"="الشارع *";
+"BuildingTF"="رقم/اسم المبنى *";
+"PaciNumberTF"="رقم العنوان (PACI)";
+"FloorTF"="الطابق *";
+"ApartmentNumberTF"="رقم الشقة *";
+"AvenueTF"="الجادة";
+"AddressInDetailsTF"="العنوان بالتفصيل";
+"PhoneRecipientNUmberTF"="رقم هاتف المستلم";
+
+
+// Alerts
+"ErrorAlert"="حدث خطا";
+"PleaseFillAllFieldsAlert"="الرجاء التاكد من ملي جميع الحقول";
+"PasswordDoesNotMatchAlert"="كلمة المرور غير متطابقة";
+"YouMastAgreeToTermsAndConditionsAlert"="يجب عليك الموافقة على الشروط والأحكام";
+"EmailOrPasswordIsEmptyAlert"="البريد أو كلمة المرور فارغة";
+
+// Titles
+"HomeTitle"="الرئيسية";
+"CategoriesTitle"="التصنيفات";
+"ProductsTitle"="منتجات";
+"CartTitle"="عربة التسوق";
+"CheckoutTitle"="إتمام الطلب";
+"NewAddressTitle"="عنوان جديد";
+"OffersTitle"="العروض";
+"AccountTitle"="الحساب";
+"EditProfileTitle"="تعديل الملف الشخصي";
+"OrdersTitle"="الطلبات";
+"AddressesTitle"="العناوين";
+"FavoritesTitle"="المفضلة";
+"AboutUsTitle"="من نحن";
+"ContactUsTitle"="تواصل معنا";
+"ChangePasswordTitle"="تغيير كلمة المرور";
