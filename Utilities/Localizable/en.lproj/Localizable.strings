@@ -11,64 +11,29 @@
 "RegularFont"="Cairo-Regular";
 
 // lables
-"ContinueLbl"="Continue as a";
-"IAgreeLbl"= "I agree for";
-"EditProfileLbl"="Edit Profile";
-"ChangePasswordLbl"="Change password";
-"OrdersLbl"="Orders";
-"AddressLbl"="Addresses";
-"NameProfileLbl"="Welcome Mohamed !";
-"EditYourProfileLbl"="Edit your profile now.";
-"ChangeYourPasswordLbl"="Change Your password now.";
-"AddCartLbl"="Add to cart";
-"FavoritesLbl"="Favorites";
-"AboutUsLbl"="About us";
- "ContactUsLbl"="Contact US";
-"LanguageLbl"="English";
-"LocationLbl"="Current location";
-"AddNewAddressLbl"="New Address";
- "ProductLbl"="Products";
- "DeliveryLbl"="Delivery cost";
-"SubtotalLbl"="Subtotal";
-"TotalLbl"="Total";
-"PromoCodeLbl"="Do you have promo code ?";
-"ApplyLbl"="Apply";
- "PaymentMethodLbl"="Select payment method";
- "PayLbl"="Pay";
+"SigninLib"="Sign In";
+"EmailLib"="E-mail";
+"PasswordLib"="Password";
+"LoginWithSocialLib"="Login with Social ";
+"DontHaveAnAccountLib"="Don’t have an account?";
+"AgainPasswordLib"="Password Again";
+"SignupWithSocialMediaLib"="lognUp with Social";
+"DoyoualreadyhaveanaccountLib"="Do you already have an account?";
+"SignupLib"="Sign Up";
+"PhoneNumberLib"="Phone Number";
+"ForgotPasswordLib"="Forgot Password?";
+"DetailsPasswordLib"="Please enter your email address. You will receive a link to create a new password via email.";
+
 // Buts
-"ForgotPasswordBut"="Forget Password?";
-"LoginBut"="Login";
-"RegisterBut"="Register";
-"GustBut"="Guest";
-"TermsBut"="Terms &";
-"ConditionsBut"="Conditions";
-"LogoutBut"="logout";
-"SaveBut"="Save";
-"AddCartBut"="Add to cart";
-"SendBut"="Send";
+"loginBut"="LOGIN";
+"forgotPasswordBut"="Forgot your password?";
+ "signUpBut"="Sign Up";
 
 // TextFileds
-"emailOrMobileTF"="Email or Mobile";
+"EmailTF"="E-mail";
 "passwordTF"="Password";
-"nameTF"="Name";
-"emailTF"="Email";
-"mobileTF"="Mobile";
-"confirmPasswordTF"="Re type password";
-"oldPasswordTF"="Old Password";
-"newPasswordTF"="New Password";
-"AddressNameTF"="Address Name";
-"CityNameTF"="City *";
-"AreaTF"="Area *";
-"BlockTF"="Block *";
-"StreetTF"="Street *";
-"BuildingTF"="Building no./name *";
-"PaciNumberTF"="PACI Number";
-"FloorTF"="Floor *";
-"ApartmentNumberTF"="Apartment number *";
-"AvenueTF"="Avenue";
-"AddressInDetailsTF"="Address In Details";
-"PhoneRecipientNUmberTF"="Phone Recipient Number";
-
+"againPasswordTF"="Password Again";
+"phoneNumberTF"="966-551902770";
 
 // Alerts
 "ErrorAlert"="Error";
@@ -76,20 +41,4 @@
 "PasswordDoesNotMatchAlert"="Password does not match";
 "YouMastAgreeToTermsAndConditionsAlert"="You mast agree to terms and conditions";
 "EmailOrPasswordIsEmptyAlert"="Email or Password is empty";
-
 // Titls
- "HomeTitle"="Home";
-"CategoriesTitle"="Categories";
- "ProductsTitle"="Products";
-"CartTitle"="Cart";
- "CheckoutTitle"="Checkout";
- "NewAddressTitle"="New Address";
-"OffersTitle"="Offers";
-"AccountTitle"="Account";
- "EditProfileTitle"="Edit Profile   ";
- "OrdersTitle"="Orders";
-"AddressesTitle"="Addresses";
-"FavoritesTitle"="Favorites";
-"AboutUsTitle"="About us";
- "ContactUsTitle"="Contact US";
-"ChangePasswordTitle"="Change password";

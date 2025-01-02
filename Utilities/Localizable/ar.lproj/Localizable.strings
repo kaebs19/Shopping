@@ -10,65 +10,30 @@
 "RegularFont"="Cairo-Regular";
 
 // lables
-"ContinueLbl"="الاستمرار كا ";
-"IAgreeLbl"= "انا موافق على";
-"EditProfileLbl"="تعديل ملف شخصي";
-"ChangePasswordLbl"="تغير كلمة السر";
-"OrdersLbl"="طلبات";
-"AddressLbl"="العناوين";
-"NameProfileLbl"="مرحبا محمد !";
-"EditYourProfileLbl"="قم بتعديل ملفك الشخصي الآن.";
-"ChangeYourPasswordLbl"="قم بتغيير كلمة المرور الخاصة بك الآن.";
-"AddCartLbl"="أضافة الي السلة";
-"FavoritesLbl"="مفضلات";
-"AboutUsLbl"="حول التطبيق";
- "ContactUsLbl"="أتصل بنا";
-"LanguageLbl"="العربية";
-"LocationLbl"="الموقع الحالي";
-"AddNewAddressLbl"="عنوان جديد";
-"ProductLbl"="المنتجات";
-"DeliveryLbl"="تكلفة التوصيل";
-"SubtotalLbl"="الإجمالي الفرعي";
-"TotalLbl"="الإجمالي";
-"PromoCodeLbl"="هل لديك رمز ترويجي؟";
-"ApplyLbl"="تطبيق";
-"PaymentMethodLbl"="اختر طريقة الدفع";
-"PayLbl"="ادفع";
-```
+"SigninLib"="تسجيل الدخول";
+"EmailLib"="البريد الاكتروني";
+"PasswordLib"="كلمة المرور";
+"LoginWithSocialLib"="تسجيل دخول بواسطة شبكات تواصل";
+"DontHaveAnAccountLib"="لاأملك اي حساب من قبل؟";
+"AgainPasswordLib"="تاكيد كلمة المرور";
+"SignupWithSocialMediaLib"="تسجيل بواسطة حسابات تواصل الاجتماعي";
+"DoyoualreadyhaveanaccountLib"="هل لديك حساب بالفعل من قبل ؟";
+"SignupLib"="تسجيل";
+"PhoneNumberLib"="رقم الجوال";
+"ForgotPasswordLib"="نسيت كلمة المرور ؟";
+"DetailsPasswordLib"="الرجاء إدخال عنوان بريدك الإلكتروني. سوف تتلقى رابطًا لإنشاء كلمة مرور جديدة عبر البريد الإلكتروني.";
 
-// Buttions
-"ForgotPasswordBut"="هل نسيت كلمة السر ؟";
-"LoginBut"="تسجيل دخول";
-"RegisterBut"=" حساب جديد";
-"GustBut"="ضيف";
-"TermsBut"="شروط &";
-"ConditionsBut"="الأحكام";
-"LogoutBut"="تسجيل خروج";
-"SaveBut"="حفظ";
-"AddCartBut"="أضافة الي السلة";
-"SendBut"="إرسال";
+
+// Buts
+"loginBut"="تسجيل دخول";
+"forgotPasswordBut"="هل نسيت كلمة المرور ؟";
+ "signUpBut"="التسجيل";
 
 // TextFileds
-"emailOrMobileTF"="البريد او الجوال";
+"EmailTF"="البريد الاكتروني";
 "passwordTF"="كلمة المرور";
-"nameTF"="الأسم";
-"emailTF"="البريد الأكتروني";
-"mobileTF"="الجوال";
-"confirmPasswordTF"="اعد كتابة كلمة المرور";
-"oldPasswordTF"="كلمة المرور القديمة؟";
-"newPasswordTF"="كبمة المرور الجديدة";
-"AddressNameTF"="اسم العنوان";
-"CityNameTF"="المدينة *";
-"AreaTF"="المنطقة *";
-"BlockTF"="القطعة *";
-"StreetTF"="الشارع *";
-"BuildingTF"="رقم/اسم المبنى *";
-"PaciNumberTF"="رقم العنوان (PACI)";
-"FloorTF"="الطابق *";
-"ApartmentNumberTF"="رقم الشقة *";
-"AvenueTF"="الجادة";
-"AddressInDetailsTF"="العنوان بالتفصيل";
-"PhoneRecipientNUmberTF"="رقم هاتف المستلم";
+"againPasswordTF"="اعادة كتابة كلمة المرور";
+"phoneNumberTF"="966-551902770";
 
 
 // Alerts
