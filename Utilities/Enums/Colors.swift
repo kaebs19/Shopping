@@ -19,6 +19,12 @@ enum Colors: String {
     case C9F97979 = "#9F97979"
     case C000000 = "#000000"
     case CF7F7F7 = "#F7F7F7"
+    case CC84040_Rad = "#C84040"
+    case CEEEEEE = "#EEEEEE"
+    case CBFBFBF = "#CBFBFB"
+    case C867F7F = "#867F7F"
+    case CFF7A59 = "#FF7A59"
+    case C6DCEE7 = "#6DCEE7"
     
     var uiColor: UIColor? {
         return UIColor(hex: self.rawValue)

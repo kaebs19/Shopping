@@ -24,4 +24,5 @@ public func isEnglish() -> Bool {
     } else {
         return true
     }
+    
 }

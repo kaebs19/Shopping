@@ -23,11 +23,14 @@
 "PhoneNumberLib"="Phone Number";
 "ForgotPasswordLib"="Forgot Password?";
 "DetailsPasswordLib"="Please enter your email address. You will receive a link to create a new password via email.";
+"CollectionsLib"="Collections";
+"FeaturedProductsLib"="Featured Products";
 
 // Buts
 "loginBut"="LOGIN";
 "forgotPasswordBut"="Forgot your password?";
  "signUpBut"="Sign Up";
+"moreBut"="More";
 
 // TextFileds
 "EmailTF"="E-mail";
@@ -41,4 +44,14 @@
 "PasswordDoesNotMatchAlert"="Password does not match";
 "YouMastAgreeToTermsAndConditionsAlert"="You mast agree to terms and conditions";
 "EmailOrPasswordIsEmptyAlert"="Email or Password is empty";
+"SuccessAlert"="Success";
+"SuccessfullyLoggedInAlert"="SuccessfullyLoggedInAlert";
+"PasswordIsShortAlert"="Password is too short please try again ";
+ "EmailFormatIsIncorrectAlert"="Invalid mail format please try again";
+ "PasswordIsEmptyAlert"="Emil is Empty please try again ";
+"EmailIsEmptyAlert"="Password is Empty please try again";
 // Titls
+"HomeTitle"="Home";
+"CategoriesTitle"="Catrgories";
+"FeaturedProductVCTitle"="Featured Product";
+"AccountTitle"="Account";

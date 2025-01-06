@@ -8,10 +8,9 @@
 import Foundation
 
 enum Directions {
-    
     case Right
     case Left
     case Center
     case Normal
-    
+
 }

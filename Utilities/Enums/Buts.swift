@@ -13,7 +13,7 @@ enum Buts: String{
     case login = "loginBut"
     case forgotPassword = "forgotPasswordBut"
     case signUp = "signUpBut"
-    
+    case more = "moreBut"
     
     var textBut: String{
         return rawValue.localized

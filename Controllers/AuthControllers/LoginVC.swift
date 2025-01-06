@@ -53,6 +53,11 @@ class LoginVC: UIViewController {
     
     @IBAction func loginClickBut(_ sender: UIButton) {
         
+        gotToNextVC(storyboard: .TabBars, identifier: .TabBars )
+        
+//        if validateLoginFields(){
+//            self.showMessage(title: Alerts.Success.rawValue, message: Alerts.Successfully.texts, thme: .success  )
+//        }
     }
     
     @IBAction func signUpClickBut(_ sender: UIButton) {
@@ -64,6 +69,7 @@ class LoginVC: UIViewController {
 extension LoginVC{
     
     func setupUI(){
+        hideKeyboard()
         showMessageVIew.isHidden = true
         showMessageVIew.addRadius(radius: 25)
         bigView.addMaskCorners(radius: 20, corners: [.topLeftCorner , .topLeftCorner])
@@ -90,5 +96,64 @@ extension LoginVC{
         dontHaveAccountLable.customLabel(text: Libs.dontHaveAnAccount.textLib, color: .C000000, size: .size_12 , font: .cairoLight , typeFont: .semibold)
         signUpBut.customButton(text: .signUp, textColor: .C000000, ofSize: .size_12, font: .cairoBold, styleFont: .semibold)
         
+    }
+    
+    
+    func validateLoginFields() -> Bool {
+        
+        resetBorders()
+        
+        // التحقق من البريد الإلكتروني
+        guard let email = emailTextField.text, !email.isEmpty else {
+            self.showMessage(title: Alerts.Error.texts, message: Alerts.EmailIsEmpty.texts, thme: .error)
+            bacEmailAndPasswordView.forEach { view in
+                if view.tag == 0{
+                    view.addBoder(color: .CC84040_Rad, width: 1)
+                }
+            }
+            return false
+        }
+        // التحقق من صحة تنسيق البريد الإلكتروني
+        if !isValidEmail(email) {
+            self.showMessage(title: Alerts.Error.texts, message: Alerts.EmailFormatIsIncorrect.texts, thme: .error)
+            bacEmailAndPasswordView.forEach { view in
+                if view.tag == 0{
+                    view.addBoder(color: .CC84040_Rad, width: 1)
+                }
+            }
+            return false
+        }
+        
+        // التحقق من كلمة المرور
+        guard let password = passwordTextField.text, !password.isEmpty else {
+            self.showMessage(title: Alerts.Error.texts, message: Alerts.PasswordIsEmpty.texts, thme: .error)
+            bacEmailAndPasswordView.forEach { view in
+                if view.tag == 1{
+                    view.addBoder(color: .CC84040_Rad, width: 1)
+                }
+            }
+            return false
+        }
+        
+        // التحقق من قوة كلمة المرور (اختياري)
+        if !isValidPassword(password) {
+            self.showMessage(title: Alerts.Error.texts, message: Alerts.PasswordIsShort.texts, thme: .error)
+            bacEmailAndPasswordView.forEach { view in
+                if view.tag == 1{
+                    view.addBoder(color: .CC84040_Rad, width: 1)
+                }
+            }
+            return false
+        }
+        
+        // إذا كانت جميع المدخلات صحيحة
+        return true
+    }
+    
+    // إعادة تعيين الحدود لجميع العناصر
+    func resetBorders() {
+        bacEmailAndPasswordView.forEach { view in
+            view.addBoder(color: .CE6E6E6, width: 1) // إزالة الحدود
+        }
     }
 }

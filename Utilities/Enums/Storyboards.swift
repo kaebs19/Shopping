@@ -9,4 +9,5 @@ import Foundation
 
 enum Storyboards: String , CaseIterable {
     case Main = "Main"
+    case TabBars = "TabBars"
 }

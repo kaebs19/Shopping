@@ -39,6 +39,7 @@ class ForgotPasswordVC: UIViewController {
 extension ForgotPasswordVC {
     func setupUI() {
         isHideNavigationBar()
+        hideKeyboard()
         bigView.addMaskCorners(radius: 20, corners: [.topLeftCorner , .topRightCorner])
         forgetPasswordLable.customLabel(text: Libs.forgotPassword.textLib, color: .C000000, size: .size_20 , font: .cairoMedium , typeFont: .semibold)
         detailsLable.customLabel(text: Libs.detilsPassword.textLib, color: .C000000, size: .size_14 ,font: .cairoRegular, line: 3)

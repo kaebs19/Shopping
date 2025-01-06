@@ -22,7 +22,8 @@ enum Libs: String {
     case loginWithSocial = "LoginWithSocialLib"
     case forgotPassword = "ForgotPasswordLib"
     case detilsPassword = "DetailsPasswordLib"
-    
+    case collections = "CollectionsLib"
+    case featuredProducts = "FeaturedProductsLib"
     
     var textLib: String {
         return rawValue.localized

@@ -68,6 +68,7 @@ extension SigninVC {
     
     func setup() {
         isHideNavigationBar()
+        hideKeyboard()
         bigView.addMaskCorners(radius: 20, corners: [.topLeftCorner , .topRightCorner])
         signupLable.customLabel(text: Libs.Signup.textLib, color: .C110F24, size: .size_20 , font: .cairoBold , typeFont: .semibold)
         emailLable.customLabel(text: Libs.email.textLib, color: .C110F24, size: .size_12 , font: .cairoRegular)

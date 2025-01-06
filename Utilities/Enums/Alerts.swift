@@ -1,0 +1,26 @@
+//
+//  Alerts.swift
+//  Shopping
+//
+//  Created by Mohammed Saleh on 02/01/2025.
+//
+
+import Foundation
+
+enum Alerts: String , CaseIterable {
+    case Error = "ErrorAlert"
+    case PleaseFillAllFields = "PleaseFillAllFieldsAlert"
+    case PasswordDoesNotMatch = "PasswordDoesNotMatchAlert"
+    case YouMastAgreeToTermsAndConditions = "YouMastAgreeToTermsAndConditionsAlert"
+    case EmailOrPasswordIsEmptyAlert = "EmailOrPasswordIsEmptyAlert"
+    case Success = "SuccessAlert"
+    case Successfully = "SuccessfullyLoggedInAlert"
+    case PasswordIsShort = "PasswordIsShortAlert"
+    case EmailFormatIsIncorrect = "EmailFormatIsIncorrectAlert"
+    case PasswordIsEmpty = "PasswordIsEmptyAlert"
+    case EmailIsEmpty = "EmailIsEmptyAlert"
+    
+    var texts: String {
+        return rawValue.localized
+    }
+}
