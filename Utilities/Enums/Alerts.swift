@@ -19,6 +19,10 @@ enum Alerts: String , CaseIterable {
     case EmailFormatIsIncorrect = "EmailFormatIsIncorrectAlert"
     case PasswordIsEmpty = "PasswordIsEmptyAlert"
     case EmailIsEmpty = "EmailIsEmptyAlert"
+    case warning = "WarningAlert"
+    case warningMessage = "WarningMessageAlert"
+    case yes = "YesAlert"
+    case no = "NoAlert"
     
     var texts: String {
         return rawValue.localized

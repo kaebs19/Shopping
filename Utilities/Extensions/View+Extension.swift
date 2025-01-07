@@ -76,4 +76,14 @@ extension UIView {
             }
         }
     }
+    
+    func AddMakeCircular(radius: CGFloat? = nil) {
+        
+        if let radius = radius {
+            self.layer.cornerRadius = radius
+        } else {
+            self.layer.cornerRadius = min(self.frame.width, self.frame.height) / 2.0
+        }
+        self.layer.masksToBounds = true
+    }
 }

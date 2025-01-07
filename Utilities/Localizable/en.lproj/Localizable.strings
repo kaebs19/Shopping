@@ -25,6 +25,16 @@
 "DetailsPasswordLib"="Please enter your email address. You will receive a link to create a new password via email.";
 "CollectionsLib"="Collections";
 "FeaturedProductsLib"="Featured Products";
+"WelcomeLib"="Welcome";
+
+"OrdersLib"="Orders";
+ "WishListLib"="Wish List";
+ "LastViewedLib"="Last Viewed";
+ "ShippingAdressLib"="Shipping Adress";
+"LanguageLib"="Language";
+ "SettingsLib"="Settings";
+ "HelpLib"="Help";
+"LogoutLib"="Logout";
 
 // Buts
 "loginBut"="LOGIN";
@@ -37,6 +47,8 @@
 "passwordTF"="Password";
 "againPasswordTF"="Password Again";
 "phoneNumberTF"="966-551902770";
+"SearchTF"="Seatch";
+
 
 // Alerts
 "ErrorAlert"="Error";
@@ -50,6 +62,11 @@
  "EmailFormatIsIncorrectAlert"="Invalid mail format please try again";
  "PasswordIsEmptyAlert"="Emil is Empty please try again ";
 "EmailIsEmptyAlert"="Password is Empty please try again";
+"WarningAlert"="Confirm Logout";
+"WarningMessageAlert"="Are you sure you want to log out?";
+"YesAlert"="Yes";
+"NoAlert"="No";
+
 // Titls
 "HomeTitle"="Home";
 "CategoriesTitle"="Catrgories";

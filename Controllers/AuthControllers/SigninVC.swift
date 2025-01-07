@@ -34,7 +34,7 @@ class SigninVC: UIViewController {
         didSet{
             passwordTextField.togglePassword()
             againPasswordTextField.togglePassword()
-            let imageName = isShowPassword ? Imags.Eye_on.names : Imags.Eye_of.names
+            let imageName = isShowPassword ? Images.Eye_on.names : Images.Eye_of.names
             for imageViews in showPasswordImage {
                 UIView.transition(with: imageViews, duration: 0.4 , options: .transitionCrossDissolve, animations: {
                     imageViews.image = UIImage(named: imageName)

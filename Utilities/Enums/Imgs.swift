@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Imags: String, CaseIterable {
+enum Images: String, CaseIterable {
     case Eye_of = "eye-off"
     case Eye_on = "eye_on"
     
@@ -23,6 +23,14 @@ enum Imags: String, CaseIterable {
     case Cart = "Cart"
     case Filter = "Filter"
     case Menu = "Menu"
+    
+    case Address_menu = "address"
+    case Help_circle_menu = "help-circle"
+    case Language_menu = "language"
+    case Lost_view_menu = "lost_view"
+    case Order_menu = "order"
+    case Settings_menu = "settings"
+    case Wish_List = "WishList"
     
     
     var names: String {

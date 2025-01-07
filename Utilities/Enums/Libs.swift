@@ -24,6 +24,15 @@ enum Libs: String {
     case detilsPassword = "DetailsPasswordLib"
     case collections = "CollectionsLib"
     case featuredProducts = "FeaturedProductsLib"
+    case welcome = "WelcomeLib"
+    case orders = "OrdersLib"
+    case WishList = "WishListLib"
+    case LastViewed = "LastViewedLib"
+    case ShippingAdress = "ShippingAdressLib"
+    case Language = "LanguageLib"
+    case Settings = "SettingsLib"
+    case Help = "HelpLib"
+    case logout = "LogoutLib"
     
     var textLib: String {
         return rawValue.localized

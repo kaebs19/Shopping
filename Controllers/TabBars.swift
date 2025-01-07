@@ -89,7 +89,7 @@ extension TabBars {
 
 struct TabBarItemConfig {
     let title: Titles
-    let selectedImage: Imags
-    let unselectedImage: Imags
+    let selectedImage: Images
+    let unselectedImage: Images
 }
 

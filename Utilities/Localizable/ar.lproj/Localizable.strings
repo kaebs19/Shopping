@@ -24,6 +24,16 @@
 "DetailsPasswordLib"="الرجاء إدخال عنوان بريدك الإلكتروني. سوف تتلقى رابطًا لإنشاء كلمة مرور جديدة عبر البريد الإلكتروني.";
 "CollectionsLib"="الأقسام";
 "FeaturedProductsLib"="المنتجات المميزة";
+"WelcomeLib"="مرحبا";
+
+"OrdersLib"="الطلبات";
+ "WishListLib"="قائمة الرغبات";
+ "LastViewedLib"="آخر المشاهدة";
+ "ShippingAdressLib"="عنوان الشحن";
+"LanguageLib"="اللغة";
+ "SettingsLib"="الأعدادات";
+ "HelpLib"="المساعدة";
+"LogoutLib"="تسجيل خروج";
 
 
 // Buts
@@ -38,7 +48,7 @@
 "passwordTF"="كلمة المرور";
 "againPasswordTF"="اعادة كتابة كلمة المرور";
 "phoneNumberTF"="966-551902770";
-
+"SearchTF"="بحث";
 
 // Alerts
 "ErrorAlert"="حدث خطا";
@@ -52,6 +62,10 @@
  "EmailFormatIsIncorrectAlert"="تنسيق البريد الاكتروني غير صحيح يرجاء محاولة مرة اخري";
  "PasswordIsEmptyAlert"="البريد الأكتروني فارغ يرجاء إعادة كتابتة ! ";
 "EmailIsEmptyAlert"="كلمة المرور فازغة يرجاء كتابة كلمه المرور !";
+"WarningAlert"="تأكيد تسجيل الخروج";
+"WarningMessageAlert"="هل أنت متأكد أنك تريد تسجيل الخروج؟";
+"YesAlert"="نعم";
+"NoAlert"="لا";
 
 
 // Titles

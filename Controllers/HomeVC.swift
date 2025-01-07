@@ -103,8 +103,8 @@ extension HomeVC: UICollectionViewDelegateFlowLayout {
             case 0:
                 let height = collectionView.bounds.height
                 let width = height * 1.5620437956
-                return CGSize(width: width , height: height)
-                
+                print("Width: \(width), Height: \(height)")
+                return CGSize(width: width, height: height)
             default:
                 // number Of cells In row
                 let numberOfCellInRow: CGFloat = 2

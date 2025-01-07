@@ -31,7 +31,7 @@ class LoginVC: UIViewController {
     var isShowPassword: Bool = false {
         didSet {
             passwordTextField.isSecureTextEntry = !isShowPassword
-            let imageName = isShowPassword ? Imags.Eye_on.names : Imags.Eye_of.names
+            let imageName = isShowPassword ? Images.Eye_on.names : Images.Eye_of.names
             UIView.transition(with: showPasswordImage, duration: 5.0, options: .transitionFlipFromLeft , animations: {
                 self.showPasswordImage.image = UIImage(named: imageName)
             } , completion: nil)

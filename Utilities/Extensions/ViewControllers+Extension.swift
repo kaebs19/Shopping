@@ -10,7 +10,9 @@ import UIKit
 import SwiftMessages
 import SideMenu
 
+
 extension UIViewController {
+    
     
     /// Navigates to the next view controller.
     /// ينتقل إلى واجهة المستخدم التالية.
@@ -96,6 +98,7 @@ extension UIViewController {
     }
     
     
+    
     /// Checks if the email is in a valid format.
     /// يتحقق مما إذا كان البريد الإلكتروني بتنسيق صحيح.
     func isValidEmail(_ email: String) -> Bool {
@@ -121,14 +124,14 @@ extension UIViewController {
             switch item {
                     
                 case .MENU:
-                    leftBar.append(UIBarButtonItem(image: UIImage(named: Imags.Menu.names)?.withRenderingMode(.alwaysOriginal), style: UIBarButtonItem.Style.plain, target: self, action: #selector(showMenuButTappes)))
+                    leftBar.append(UIBarButtonItem(image: UIImage(named: Images.Menu.names)?.withRenderingMode(.alwaysOriginal), style: UIBarButtonItem.Style.plain, target: self, action: #selector(showMenuButTappes)))
                 case .CART:
-                    rightBar.append(UIBarButtonItem(image: UIImage(named: Imags.Cart.names)?.withRenderingMode(.alwaysOriginal), style: UIBarButtonItem.Style.plain, target: self, action: #selector(showCartButTappes)))
+                    rightBar.append(UIBarButtonItem(image: UIImage(named: Images.Cart.names)?.withRenderingMode(.alwaysOriginal), style: UIBarButtonItem.Style.plain, target: self, action: #selector(showCartButTappes)))
                 case .BACK:
-                    leftBar.append(UIBarButtonItem(image: UIImage(named: Imags.Back.names)?.withRenderingMode(.alwaysOriginal), style: UIBarButtonItem.Style.plain, target: self, action: #selector(showBlackButTappes)))
+                    leftBar.append(UIBarButtonItem(image: UIImage(named: Images.Back.names)?.withRenderingMode(.alwaysOriginal), style: UIBarButtonItem.Style.plain, target: self, action: #selector(showBlackButTappes)))
 
                 case .FLITER:
-                    rightBar.append(UIBarButtonItem(image: UIImage(named: Imags.Filter.names)?.withRenderingMode(.alwaysOriginal), style: UIBarButtonItem.Style.plain, target: self, action: #selector(showFliterButTappes)))
+                    rightBar.append(UIBarButtonItem(image: UIImage(named: Images.Filter.names)?.withRenderingMode(.alwaysOriginal), style: UIBarButtonItem.Style.plain, target: self, action: #selector(showFliterButTappes)))
             }
             
         }
@@ -176,6 +179,18 @@ extension UIViewController {
     @objc func showFliterButTappes(){
         
     }
+
+    //     // Add buttons for Yes and No
+    /// button yes
+    @objc func yesButtonTapped(){
+       SwiftMessages.hide()
+        
+    }
+    
+    /// button n
+    @objc func noButtonTapped(){
+        SwiftMessages.hide()
+            }
 
     
 }

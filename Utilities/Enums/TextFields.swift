@@ -13,6 +13,7 @@ enum TextFields: String {
     case password = "passwordTF"
     case againPassword = "againPasswordTF"
     case phoneNumber = "phoneNumberTF"
+    case Search = "SearchTF"
     
     
     var placeholder: String {
