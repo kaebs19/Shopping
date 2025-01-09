@@ -46,7 +46,7 @@ extension ForgotPasswordVC {
         emailLable.customLabel(text: Libs.email.textLib, color: .C110F24, size: .size_12 , font: .cairoRegular)
         emailTextField.customTextField(placeholder: .email, ofSize: .size_14)
         bagWithEmilView.addRadius(radius: 24)
-        bagWithEmilView.addBoder(color: .CE6E6E6, width: 1)
+        bagWithEmilView.addBorder(color: .CE6E6E6, width: 1)
         
         [forGetPasswordBut].forEach { button in
             button?.customButton(text: .forgotPassword, textColor: .CFFFFFF, backgroundColor: .C00CBFF, ofSize: .size_14, font: .cairoBold, styleFont: .bold)

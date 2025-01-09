@@ -14,6 +14,8 @@ enum Buts: String{
     case forgotPassword = "forgotPasswordBut"
     case signUp = "signUpBut"
     case more = "moreBut"
+    case sale = "saleBut"
+    
     
     var textBut: String{
         return rawValue.localized

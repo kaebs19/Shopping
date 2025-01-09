@@ -10,4 +10,5 @@ import Foundation
 enum TVCells: String , CaseIterable {
     
     case SideMenuTVCell = "SideMenuTVCell"
+    case CategoriesTVCell = "CategoriesTVCell"
 }

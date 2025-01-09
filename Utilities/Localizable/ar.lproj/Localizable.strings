@@ -34,6 +34,10 @@
  "SettingsLib"="الأعدادات";
  "HelpLib"="المساعدة";
 "LogoutLib"="تسجيل خروج";
+"WomenLib"="النساء";
+"MenLib"="الرجال";
+"KidsLib"="الاطفال";
+"CatrgoriesLib"="الأقسام";
 
 
 // Buts
@@ -41,6 +45,7 @@
 "forgotPasswordBut"="هل نسيت كلمة المرور ؟";
  "signUpBut"="التسجيل";
 "moreBut"="المزيد";
+"saleBut"="الخصم";
 
 
 // TextFileds

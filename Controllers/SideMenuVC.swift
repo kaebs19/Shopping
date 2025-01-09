@@ -60,7 +60,7 @@ extension SideMenuVC {
     func setupUI() {
         setupTableView(tv: sideMenuTableView)
         [editImageView , backgroundEditView].forEach { view in
-            view?.AddMakeCircular()
+            view?.makeCircular()
             if let editImageView = editImageView {
                 editImageView.backgroundColor = Colors.CFFFFFF.uiColor
             }

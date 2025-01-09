@@ -25,7 +25,38 @@ enum Colors: String {
     case C867F7F = "#867F7F"
     case CFF7A59 = "#FF7A59"
     case C6DCEE7 = "#6DCEE7"
+    case CCCCED0 = "#CCCED0"
     
+
+    
+    var uiColor: UIColor? {
+        return UIColor(hex: self.rawValue)
+    }
+}
+
+
+enum ColorsBackground: String {
+    case Red = "#FF7A59"       /// لون أحمر بتدرج  - Red color
+    case Green = "#6DCEE7"     /// لون أخضر بتدرج  - Green color
+    case Blue = "#0091FF"      /// لون أزرق بتدرج  - Blue color
+    case Yellow = "#FFFF00"    /// لون أصفر بتدرج  - Yellow color
+    case White = "#FFFFFF"     /// لون أبيض بتدرج  - White color
+    case Black = "#000000"     /// لون أسود بتدرج  - Black color
+    case Orange = "#ff8000"    /// لون برتقالي بتدرج  - Orange
+    case Gray = "#E6E6E6"      /// لون رمادي بتدرج  - Gray color
+    case LightGray = "#F7F7F7" /// لون رمادي فاتح بتدرج  - Light gray color
+    case Pink = "#ff479c"      /// لون وردي بتدرج  - Pink color
+    case RoseGold = "#E6B8B7"  /// وردي ذهبي ناعم
+    case Lavender = "#E6E6FA" /// لون لافندر فاتح
+    case NavyBlue = "#001F3F" /// أزرق داكن
+    case SteelGray = "#7D7D7D" /// رمادي معدني
+    case Lemon = "#FFF44F" /// أصفر ليموني فاتح
+    case Aqua = "#00FFFF" /// أزرق فيروزي
+    case SunsetOrange = "#FF0000"
+    case DeepPurple = "#804144"
+
+    /// يحول قيمة HEX إلى UIColor.
+    /// Converts HEX value to UIColor.
     var uiColor: UIColor? {
         return UIColor(hex: self.rawValue)
     }

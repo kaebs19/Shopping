@@ -31,7 +31,9 @@ enum Images: String, CaseIterable {
     case Order_menu = "order"
     case Settings_menu = "settings"
     case Wish_List = "WishList"
-    
+    case Women = "m1"
+    case Men = "men"
+    case Kids = "kids"
     
     var names: String {
         return rawValue

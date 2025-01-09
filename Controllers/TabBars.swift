@@ -42,7 +42,7 @@ extension TabBars {
         tabBar.layer.shadowRadius = 4
         tabBar.layer.masksToBounds = false
         tabBar.addRadius(radius: 18)
-        tabBar.addBoder(color: Colors.CEEEEEE, width: 1)
+        tabBar.addBorder(color: Colors.CEEEEEE, width: 1)
         tabBar.unselectedItemTintColor = Colors.C867F7F.uiColor
     }
     

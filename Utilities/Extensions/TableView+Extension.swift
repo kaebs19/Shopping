@@ -38,8 +38,9 @@ extension UITableView {
     
     /// إخفاء أو إظهار مؤشر التمرير العمودي.
     /// Hide or show the vertical scroll indicator.
-    func hideScrollTableView(hide: Bool) {
-        self.showsVerticalScrollIndicator = hide
+    func hideScrollTableView(hide: Bool = true) {
+        self.showsVerticalScrollIndicator = !hide
+        self.showsHorizontalScrollIndicator = !hide
     }
     
     /// إعادة استخدام الخلية باستخدام النوع العام.

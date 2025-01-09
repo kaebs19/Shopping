@@ -82,7 +82,7 @@ extension SigninVC {
         
         bacEmailAndPasswordView.forEach { view in
             view.addRadius(radius: 24)
-            view.addBoder(color: .CE6E6E6, width: 1)
+            view.addBorder(color: .CE6E6E6, width: 1)
         }
 
         [signUpBut].forEach { button in

@@ -49,12 +49,12 @@ class HomeVC: UIViewController {
 extension HomeVC {
     func setupUI() {
         custmeNavigationBar(items: [.MENU , .CART], title: .Home)
-        bagdeView.addBoder(color: .C6DCEE7, width: 1)
+        bagdeView.addBorder(color: .C6DCEE7, width: 1)
         bagdeView.addRadius(radius: 6)
         collectionsLabel.customLabel(text: Libs.collections.textLib, color: .C161616, size: .size_20, font: .cairoBold , typeFont: .bold)
         featuredProductsLabel.customLabel(text: Libs.featuredProducts.textLib,  color: .C161616, size: .size_20, font: .cairoBold , typeFont: .bold)
         for more in [moreButton] {
-            more?.addBoder(color: .C6DCEE7, width: 1)
+            more?.addBorder(color: .C6DCEE7, width: 1)
             more?.addRadius(radius: 6)
             more?.customButton(text: .more, textColor: .C6DCEE7, ofSize: .size_12, font: .cairoBold, styleFont: .bold )
         }
@@ -101,20 +101,17 @@ extension HomeVC: UICollectionViewDelegateFlowLayout {
         
         switch collectionView.tag {
             case 0:
-                let height = collectionView.bounds.height
+                let height = collectionView.bounds.height - 20
                 let width = height * 1.5620437956
-                print("Width: \(width), Height: \(height)")
                 return CGSize(width: width, height: height)
             default:
-                // number Of cells In row
-                let numberOfCellInRow: CGFloat = 2
-                // spacing Between Cells
-                let spacing  = (
-                    collectionViewLayout as? UICollectionViewFlowLayout)?.minimumInteritemSpacing ?? 0
-                // value width
-                let width = floor(collectionView.bounds.width - spacing * (numberOfCellInRow - 1)) / numberOfCellInRow
-                let hight = width * 1.3680555556
-                return CGSize(width: width, height: hight)
+                let numberOfCellsInRow: CGFloat = 2
+                let collectionViewWidth = collectionView.bounds.width
+                let flowLayout = collectionViewLayout as! UICollectionViewFlowLayout
+                let spacingBetweenCells = flowLayout.minimumInteritemSpacing * (numberOfCellsInRow-1)
+                let adjustWidth = collectionViewWidth-spacingBetweenCells
+                let width = floor(adjustWidth/numberOfCellsInRow)
+                return CGSize(width: width, height: width * 1.765)
 
         }
     }

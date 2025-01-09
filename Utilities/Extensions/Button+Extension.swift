@@ -15,7 +15,7 @@ extension UIButton {
       /// يُخصص UIButton باستخدام المعاملات المقدمة.
     func customButton(text: Buts , textColor: Colors , backgroundColor: Colors = .CFFFFFF , ofSize: Sizes  , font: AppFont , styleFont: FontStyle , direction: Directions = .Normal) {
         
-        self.setTitle(text.textBut, for: .normal)
+        self.setTitle(text.textBut.localized, for: .normal)
         self.tintColor = textColor.uiColor
         self.backgroundColor = backgroundColor.uiColor
         self.titleLabel?.font = UIFont(name: font.rawValue, size: ofSize.rawValue) ?? UIFont.systemFont(ofSize: ofSize.rawValue, weight: styleFont.weight)

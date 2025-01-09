@@ -33,6 +33,10 @@ enum Libs: String {
     case Settings = "SettingsLib"
     case Help = "HelpLib"
     case logout = "LogoutLib"
+    case Women = "WomenLib"
+    case Men = "MenLib"
+    case Kids = "KidsLib"
+    case catrgories = "CatrgoriesLib"
     
     var textLib: String {
         return rawValue.localized

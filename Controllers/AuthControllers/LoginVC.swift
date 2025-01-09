@@ -81,7 +81,7 @@ extension LoginVC{
         passwordTextField.customTextField(placeholder: .email, ofSize: .size_14 ,isPassword: true)
         bacEmailAndPasswordView.forEach { view in
             view.addRadius(radius: 24)
-            view.addBoder(color: .CE6E6E6, width: 1)
+            view.addBorder(color: .CE6E6E6, width: 1)
         }
         forGetPasswordBut.customButton(text: .forgotPassword, textColor: .C000000, ofSize: .size_12, font: .cairoMedium, styleFont: .semibold)
         [loginBut].forEach { button in
@@ -108,7 +108,7 @@ extension LoginVC{
             self.showMessage(title: Alerts.Error.texts, message: Alerts.EmailIsEmpty.texts, thme: .error)
             bacEmailAndPasswordView.forEach { view in
                 if view.tag == 0{
-                    view.addBoder(color: .CC84040_Rad, width: 1)
+                    view.addBorder(color: .CC84040_Rad, width: 1)
                 }
             }
             return false
@@ -118,7 +118,7 @@ extension LoginVC{
             self.showMessage(title: Alerts.Error.texts, message: Alerts.EmailFormatIsIncorrect.texts, thme: .error)
             bacEmailAndPasswordView.forEach { view in
                 if view.tag == 0{
-                    view.addBoder(color: .CC84040_Rad, width: 1)
+                    view.addBorder(color: .CC84040_Rad, width: 1)
                 }
             }
             return false
@@ -129,7 +129,7 @@ extension LoginVC{
             self.showMessage(title: Alerts.Error.texts, message: Alerts.PasswordIsEmpty.texts, thme: .error)
             bacEmailAndPasswordView.forEach { view in
                 if view.tag == 1{
-                    view.addBoder(color: .CC84040_Rad, width: 1)
+                    view.addBorder(color: .CC84040_Rad, width: 1)
                 }
             }
             return false
@@ -140,7 +140,7 @@ extension LoginVC{
             self.showMessage(title: Alerts.Error.texts, message: Alerts.PasswordIsShort.texts, thme: .error)
             bacEmailAndPasswordView.forEach { view in
                 if view.tag == 1{
-                    view.addBoder(color: .CC84040_Rad, width: 1)
+                    view.addBorder(color: .CC84040_Rad, width: 1)
                 }
             }
             return false
@@ -153,7 +153,7 @@ extension LoginVC{
     // إعادة تعيين الحدود لجميع العناصر
     func resetBorders() {
         bacEmailAndPasswordView.forEach { view in
-            view.addBoder(color: .CE6E6E6, width: 1) // إزالة الحدود
+            view.addBorder(color: .CE6E6E6, width: 1) // إزالة الحدود
         }
     }
 }

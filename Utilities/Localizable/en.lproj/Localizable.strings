@@ -35,12 +35,17 @@
  "SettingsLib"="Settings";
  "HelpLib"="Help";
 "LogoutLib"="Logout";
+"WomenLib"="Women";
+"MenLib"="Men";
+"KidsLib"="Kids";
+"CatrgoriesLib"="Catrgories";
 
 // Buts
 "loginBut"="LOGIN";
 "forgotPasswordBut"="Forgot your password?";
  "signUpBut"="Sign Up";
 "moreBut"="More";
+"saleBut"="Sale";
 
 // TextFileds
 "EmailTF"="E-mail";
