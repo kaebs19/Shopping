@@ -11,4 +11,5 @@ enum TVCells: String , CaseIterable {
     
     case SideMenuTVCell = "SideMenuTVCell"
     case CategoriesTVCell = "CategoriesTVCell"
+    case BagsTVCell = "BagsTVCell"
 }

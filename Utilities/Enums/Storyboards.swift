@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Storyboards: String , CaseIterable {
+enum Storyboards: String  {
     case Main = "Main"
     case TabBars = "TabBars"
 }

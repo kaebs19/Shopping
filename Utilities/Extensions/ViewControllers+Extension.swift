@@ -16,7 +16,7 @@ extension UIViewController {
     
     /// Navigates to the next view controller.
     /// ينتقل إلى واجهة المستخدم التالية.
-    func gotToNextVC(storyboard: Storyboards = .Main , identifier: Identifiers , presentationStyle: PresentationStyle = .push){
+    func gotToNextVC(storyboard: Storyboards = .TabBars , identifier: Identifiers , presentationStyle: PresentationStyle = .push){
         let sb = UIStoryboard(name: storyboard.rawValue, bundle: nil)
         if let vc = sb.instantiateViewController(withIdentifier: identifier.rawValue) as? UIViewController {
             
@@ -50,7 +50,7 @@ extension UIViewController {
     func isHideNavigationBar(hide: Bool = true){
         navigationController?.isNavigationBarHidden = hide
     }
-
+    
     /// Hides the keyboard and adds a tap gesture to dismiss it.
     /// يُخفي لوحة المفاتيح ويضيف إيماءة نقر لإغلاقها.
     func hideKeyboard(){
@@ -61,13 +61,13 @@ extension UIViewController {
     
     /// Dismisses the keyboard.
     /// يُغلق لوحة المفاتيح.
-
+    
     @objc func dismissKeyboard() {
-
+        
         view.endEditing(true)
-
+        
     }
-
+    
     /// Displays a message to the user using SwiftMessages library.
     /// يعرض رسالة للمستخدم باستخدام مكتبة SwiftMessages.
     ///
@@ -78,7 +78,7 @@ extension UIViewController {
     ///              نص الرسالة.
     ///   - theme: The theme of the message (e.g., success, error, warning).
     ///            سمة الرسالة (مثل نجاح، خطأ، تحذير).
-
+    
     func showMessage(title:String , message: String, thme:Theme){
         let view = MessageView.viewFromNib(layout: .cardView)
         view.configureTheme(thme)
@@ -89,7 +89,7 @@ extension UIViewController {
         // Increase the external margin around the card. In general, the effect of this setting
         // depends on how the given layout is constrained to the layout margins.
         view.layoutMarginAdditions = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
-
+        
         // Reduce the corner radius (applicable to layouts featuring rounded corners).
         (view.backgroundView as? CornerRoundingView)?.cornerRadius = 10
         view.button?.isHidden = true
@@ -97,7 +97,11 @@ extension UIViewController {
         SwiftMessages.show(view: view)
     }
     
-    
+    func hideOrShowTabBar(hide: Bool = true) {
+        self.tabBarController?.tabBar.isHidden = hide
+        self.tabBarController?.tabBar.isTranslucent = hide
+    }
+
     
     /// Checks if the email is in a valid format.
     /// يتحقق مما إذا كان البريد الإلكتروني بتنسيق صحيح.
@@ -114,11 +118,11 @@ extension UIViewController {
         return password.count >= 6
     }
     
-    func custmeNavigationBar(items: [NavigationBar] , title: Titles?) {
+    func customNavigationBar(items: [NavigationBar] , title: Titles?) {
         
         var rightBar: [UIBarButtonItem] = []
         var leftBar: [UIBarButtonItem] = []
-            
+        
         for item in items {
             
             switch item {
@@ -129,7 +133,7 @@ extension UIViewController {
                     rightBar.append(UIBarButtonItem(image: UIImage(named: Images.Cart.names)?.withRenderingMode(.alwaysOriginal), style: UIBarButtonItem.Style.plain, target: self, action: #selector(showCartButTappes)))
                 case .BACK:
                     leftBar.append(UIBarButtonItem(image: UIImage(named: Images.Back.names)?.withRenderingMode(.alwaysOriginal), style: UIBarButtonItem.Style.plain, target: self, action: #selector(showBlackButTappes)))
-
+                    
                 case .FLITER:
                     rightBar.append(UIBarButtonItem(image: UIImage(named: Images.Filter.names)?.withRenderingMode(.alwaysOriginal), style: UIBarButtonItem.Style.plain, target: self, action: #selector(showFliterButTappes)))
             }
@@ -144,10 +148,10 @@ extension UIViewController {
         } else {
             self.navigationItem.rightBarButtonItems = rightBar
             self.navigationItem.leftBarButtonItems = leftBar
-
+            
         }
         
-}
+    }
     
     @objc func showMenuButTappes(){
         let sb = UIStoryboard(name: Storyboards.TabBars.rawValue, bundle: nil)
@@ -170,28 +174,29 @@ extension UIViewController {
     }
     
     @objc func showCartButTappes(){
-        
+        gotToNextVC(identifier: .BagVc)
     }
-
+    
     @objc func showBlackButTappes(){
         
     }
     @objc func showFliterButTappes(){
         
     }
-
+    
     //     // Add buttons for Yes and No
     /// button yes
     @objc func yesButtonTapped(){
-       SwiftMessages.hide()
+        SwiftMessages.hide()
         
     }
     
     /// button n
     @objc func noButtonTapped(){
         SwiftMessages.hide()
-            }
-
+        
+    }
+    
     
 }
 

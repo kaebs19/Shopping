@@ -22,7 +22,14 @@ extension UILabel {
     func customLabel(text: String , color: Colors , size: Sizes , font: AppFont = .cairoBlack , typeFont: FontStyle = .regular , direction: Directions = .Normal , line: Int = 0) {
         self.text = text
         self.textColor = color.uiColor
-        self.font = UIFont(name: font.rawValue, size: size.rawValue) ?? UIFont.systemFont(ofSize: size.rawValue, weight: typeFont.weight)
+        
+        guard let customFont = UIFont(name: font.rawValue, size: size.rawValue) else {
+            print("⚠️ Font not found. Using system font.")
+            self.font = UIFont.systemFont(ofSize: size.rawValue, weight: typeFont.weight)
+            return
+        }
+        self.font = customFont
+        
         switch direction {
             case .Right: self.textAlignment = .right
             case .Left: self.textAlignment = .left
@@ -47,6 +54,24 @@ extension UILabel {
         // تعيين النص المخصص إلى UILabel
         self.attributedText = attributedString
     }
+    
+    /// Add underline to the label
+    func addUnderline() {
+        guard let text  = text else { return }
+        let attributedString = NSMutableAttributedString(string: text)
+        attributedString.addAttribute(.underlineStyle, value: NSUnderlineStyle.single.rawValue, range: NSRange(location: 0, length: text.count))
+        self.attributedText = attributedString
+    }
+    
+    /// Add shadow to the label
+    func addShadow(color: Colors = .C000000 , opacity: Float = 0.5 , radius: CGFloat = 4, offset: CGSize = .zero) {
+        self.layer.shadowColor = color.uiColor?.cgColor
+        self.layer.shadowOpacity = opacity
+        self.layer.shadowRadius = radius
+        self.layer.shadowOffset = offset
+        self.layer.masksToBounds = false
+    }
 
+    
     
 }

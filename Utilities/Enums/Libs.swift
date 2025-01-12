@@ -37,6 +37,13 @@ enum Libs: String {
     case Men = "MenLib"
     case Kids = "KidsLib"
     case catrgories = "CatrgoriesLib"
+    case ShoppingBag = "ShoppingBagLib"
+    case MessageEmpty = "MessageEmptyLib"
+    case ShoppingTitle = "ShoppingTitleLib"
+    case NameSurname = "NameSurnameLib"
+    case CardNumber = "CardNumberLib"
+    case ExpirationDate = "ExpirationDateLib"
+    case CVC = "CVCLib"
     
     var textLib: String {
         return rawValue.localized

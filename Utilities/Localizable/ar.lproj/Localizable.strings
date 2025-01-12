@@ -38,7 +38,13 @@
 "MenLib"="الرجال";
 "KidsLib"="الاطفال";
 "CatrgoriesLib"="الأقسام";
-
+"ShoppingBagLib"="سلة التسوق";
+"MessageEmptyLib"="سلة التسوق الخاصة بك فارغة املأ سلة التسوق الخاصة بك بمنتجات رائعة من مترجنا";
+"ShoppingTitleLib"="قائيمة التسوق";
+"NameSurnameLib"="الأسم ولقب";
+"CardNumberLib"="رقم البطاقة";
+"ExpirationDateLib"="تاريخ انتهاء";
+"CVCLib"="رقم التحقق";
 
 // Buts
 "loginBut"="تسجيل دخول";
@@ -46,6 +52,8 @@
  "signUpBut"="التسجيل";
 "moreBut"="المزيد";
 "saleBut"="الخصم";
+"shopNowBut"="تسوق الآن";
+"paymentBut"="المدفوعات";
 
 
 // TextFileds
@@ -54,6 +62,11 @@
 "againPasswordTF"="اعادة كتابة كلمة المرور";
 "phoneNumberTF"="966-551902770";
 "SearchTF"="بحث";
+"NameSurnameTF"="الاسم والقلب";
+"CardNumberTF"="رقم البطاقة";
+"CVCTF"="رقم التحقق";
+"ExpirationDateTF"="تاريخ انتهاء";
+
 
 // Alerts
 "ErrorAlert"="حدث خطا";
@@ -78,7 +91,7 @@
 "CategoriesTitle"="التصنيفات";
 "FeaturedProductVCTitle"="منتجات مميزة";
 "CartTitle"="عربة التسوق";
-"CheckoutTitle"="إتمام الطلب";
+"PaymentTitle"="إتمام الطلب";
 "NewAddressTitle"="عنوان جديد";
 "OffersTitle"="العروض";
 "AccountTitle"="الحساب";
@@ -89,3 +102,4 @@
 "AboutUsTitle"="من نحن";
 "ContactUsTitle"="تواصل معنا";
 "ChangePasswordTitle"="تغيير كلمة المرور";
+"ShoppingBagTitle"="عربة التسوق";

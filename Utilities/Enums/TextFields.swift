@@ -14,7 +14,10 @@ enum TextFields: String {
     case againPassword = "againPasswordTF"
     case phoneNumber = "phoneNumberTF"
     case Search = "SearchTF"
-    
+    case NameSurname = "NameSurnameTF"
+    case CardNumber = "CardNumberTF"
+    case CVC = "CVCTF"
+    case ExpirationDate = "ExpirationDateTF"
     
     var placeholder: String {
         return rawValue.localized

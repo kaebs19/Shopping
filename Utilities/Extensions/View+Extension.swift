@@ -36,6 +36,15 @@ extension UIView {
         self.layer.shadowPath = customPath?.cgPath ?? UIBezierPath(rect: self.bounds).cgPath
     }
     
+    func removShadow() {
+        layer.shadowColor = nil
+        layer.shadowOpacity = 0
+        layer.shadowRadius = 0
+        layer.shadowOffset = .zero
+        layer.masksToBounds = false
+    }
+
+    
     /// Applies a corner radius to specific corners of the view.
     /// يُطبق نصف قطر زاوية على زوايا محددة من العرض.
     func addMaskCorners(radius: CGFloat , corners: [cornerMask]) {
@@ -95,7 +104,19 @@ extension UIView {
                 gradientLayer.colors = colors.map{ $0.cgColor}
                 gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.0)
                 gradientLayer.endPoint = CGPoint(x: 1.0, y: 1.0)
+                gradientLayer.cornerRadius = self.layer.cornerRadius
                 self.layer.insertSublayer(gradientLayer, at: 0)
+        }
+    }
+    
+    func configureAppearance(cornerRadius: CGFloat? = nil , gradientColors: [UIColor]? = nil) {
+        if let cornerRadius = cornerRadius {
+            self.layer.cornerRadius = cornerRadius
+            self.layer.masksToBounds = true
+        }
+        
+        if let gradientColors = gradientColors {
+            self.applyBackground(style: .gradient(gradientColors))
         }
     }
     

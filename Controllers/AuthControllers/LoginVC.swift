@@ -30,11 +30,7 @@ class LoginVC: UIViewController {
     // MARK: - Variables
     var isShowPassword: Bool = false {
         didSet {
-            passwordTextField.isSecureTextEntry = !isShowPassword
-            let imageName = isShowPassword ? Images.Eye_on.names : Images.Eye_of.names
-            UIView.transition(with: showPasswordImage, duration: 5.0, options: .transitionFlipFromLeft , animations: {
-                self.showPasswordImage.image = UIImage(named: imageName)
-            } , completion: nil)
+            updatePasswordVisibility()
         }
     }
     
@@ -43,15 +39,26 @@ class LoginVC: UIViewController {
         setupUI()
     }
     
+    private func updatePasswordVisibility() {
+        passwordTextField.isSecureTextEntry = !isShowPassword
+        let imageName = isShowPassword ? Images.Eye_on.names : Images.Eye_of.names
+        UIView.transition(with: showPasswordImage, duration: 0.3, options: .transitionFlipFromLeft, animations: {
+            self.showPasswordImage.image = UIImage(named: imageName)
+        })
+    }
+    
     @IBAction func showPasswordClickBut(_ sender: UIButton) {
         isShowPassword.toggle()
     }
     
     @IBAction func forGetPasswordClickBut(_ sender: UIButton) {
-        gotToNextVC(identifier: .ForgotPasswordVC)
+        gotToNextVC(storyboard: .Main , identifier: .ForgotPasswordVC)
     }
     
     @IBAction func loginClickBut(_ sender: UIButton) {
+        
+        UserDefault.shared.isLogin = true
+        print(UserDefault.shared.isLogin) // تأكيد القيمة
         
         gotToNextVC(storyboard: .TabBars, identifier: .TabBars )
         
@@ -61,7 +68,7 @@ class LoginVC: UIViewController {
     }
     
     @IBAction func signUpClickBut(_ sender: UIButton) {
-        gotToNextVC(identifier: .SigninVC)
+        gotToNextVC(storyboard: .Main ,identifier: .SigninVC)
     }
 }
 
@@ -95,6 +102,7 @@ extension LoginVC{
         }
         dontHaveAccountLable.customLabel(text: Libs.dontHaveAnAccount.textLib, color: .C000000, size: .size_12 , font: .cairoLight , typeFont: .semibold)
         signUpBut.customButton(text: .signUp, textColor: .C000000, ofSize: .size_12, font: .cairoBold, styleFont: .semibold)
+        
         
     }
     

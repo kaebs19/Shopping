@@ -31,33 +31,28 @@
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="m3" translatesAutoresizingMaskIntoConstraints="NO" id="lcY-BS-5Cg">
                                                 <rect key="frame" x="0.0" y="10" width="217" height="287"/>
                                             </imageView>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e4I-Ko-oPt">
-                                                <rect key="frame" x="2" y="10" width="113.33333333333333" height="34"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BBP-yN-4st">
-                                                        <rect key="frame" x="0.0" y="0.0" width="113.33333333333333" height="34"/>
-                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                    </button>
-                                                </subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BBP-yN-4st">
+                                                <rect key="frame" x="5" y="2" width="89.666666666666671" height="27"/>
                                                 <constraints>
-                                                    <constraint firstItem="BBP-yN-4st" firstAttribute="leading" secondItem="e4I-Ko-oPt" secondAttribute="leading" id="dJ5-7q-Ih0"/>
-                                                    <constraint firstAttribute="trailing" secondItem="BBP-yN-4st" secondAttribute="trailing" id="fJb-gL-dqC"/>
-                                                    <constraint firstAttribute="bottom" secondItem="BBP-yN-4st" secondAttribute="bottom" id="pI9-yN-148"/>
-                                                    <constraint firstItem="BBP-yN-4st" firstAttribute="top" secondItem="e4I-Ko-oPt" secondAttribute="top" id="tHZ-ir-AS4"/>
-                                                    <constraint firstAttribute="width" secondItem="e4I-Ko-oPt" secondAttribute="height" multiplier="60:18" id="wbT-C7-s19"/>
+                                                    <constraint firstAttribute="width" secondItem="BBP-yN-4st" secondAttribute="height" multiplier="60:18" id="3Zp-aF-kFP"/>
                                                 </constraints>
-                                            </view>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Sale">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="lcY-BS-5Cg" firstAttribute="top" secondItem="M0i-R9-Q40" secondAttribute="top" constant="10" id="Awo-ef-Wyr"/>
                                             <constraint firstItem="M7y-vU-qT3" firstAttribute="leading" secondItem="M0i-R9-Q40" secondAttribute="leading" id="FNL-V9-64E"/>
                                             <constraint firstAttribute="bottom" secondItem="lcY-BS-5Cg" secondAttribute="bottom" id="JCb-W2-zOg"/>
-                                            <constraint firstItem="e4I-Ko-oPt" firstAttribute="top" secondItem="M0i-R9-Q40" secondAttribute="top" constant="10" id="Nlp-LJ-lO7"/>
+                                            <constraint firstItem="BBP-yN-4st" firstAttribute="leading" secondItem="M0i-R9-Q40" secondAttribute="leading" constant="5" id="McJ-dC-sYx"/>
                                             <constraint firstItem="lcY-BS-5Cg" firstAttribute="leading" secondItem="M0i-R9-Q40" secondAttribute="leading" id="OFe-sK-Tmr"/>
                                             <constraint firstItem="M7y-vU-qT3" firstAttribute="top" secondItem="M0i-R9-Q40" secondAttribute="top" constant="40" id="Woi-az-qZc"/>
                                             <constraint firstAttribute="bottom" secondItem="M7y-vU-qT3" secondAttribute="bottom" id="aLH-bm-tzj"/>
-                                            <constraint firstItem="e4I-Ko-oPt" firstAttribute="leading" secondItem="M0i-R9-Q40" secondAttribute="leading" constant="2" id="fb3-FO-jxl"/>
                                             <constraint firstAttribute="trailing" secondItem="M7y-vU-qT3" secondAttribute="trailing" id="gwW-B2-Dro"/>
+                                            <constraint firstItem="BBP-yN-4st" firstAttribute="top" secondItem="M0i-R9-Q40" secondAttribute="top" constant="2" id="nSM-Tz-9lb"/>
                                             <constraint firstAttribute="width" secondItem="M0i-R9-Q40" secondAttribute="height" multiplier="144:197" id="qHZ-ij-oWp"/>
                                             <constraint firstAttribute="trailing" secondItem="lcY-BS-5Cg" secondAttribute="trailing" id="wbG-9y-oYM"/>
                                         </constraints>
@@ -115,6 +110,7 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstItem="9nE-x1-Lyq" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="CBp-Bu-DZC"/>
+                <constraint firstItem="BBP-yN-4st" firstAttribute="width" secondItem="ZTg-uK-7eu" secondAttribute="width" multiplier="0.413793" id="Cwc-sC-aj1"/>
                 <constraint firstAttribute="trailing" secondItem="9nE-x1-Lyq" secondAttribute="trailing" id="HF1-e5-89o"/>
                 <constraint firstItem="9nE-x1-Lyq" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="T2S-cb-pYr"/>
                 <constraint firstAttribute="bottom" secondItem="9nE-x1-Lyq" secondAttribute="bottom" id="W8G-To-f4r"/>
@@ -123,7 +119,6 @@
             <connections>
                 <outlet property="bauckageImageView" destination="M7y-vU-qT3" id="zn4-2f-QQ8"/>
                 <outlet property="isDiscountedLabel" destination="Ihd-jm-HV8" id="GZJ-FP-b3Z"/>
-                <outlet property="isSelaView" destination="e4I-Ko-oPt" id="USX-yC-H6t"/>
                 <outlet property="productImageView" destination="lcY-BS-5Cg" id="BD1-3g-ywz"/>
                 <outlet property="productNameLabel" destination="rRQ-2z-AiV" id="oAO-D6-QCv"/>
                 <outlet property="productPriceLabel" destination="8Pp-W9-Xve" id="MpP-V0-wz9"/>

@@ -7,17 +7,44 @@
 
 import Foundation
 
-
-enum Buts: String{
-    
+/// Enum representing button types in the app.
+enum Buts: String {
+    /// Button for login action
     case login = "loginBut"
+    
+    /// Button for forgot password action
     case forgotPassword = "forgotPasswordBut"
+    
+    /// Button for sign-up action
     case signUp = "signUpBut"
+    
+    /// Button for more options
     case more = "moreBut"
+    
+    /// Button for sales
     case sale = "saleBut"
     
+    /// Button for shopping now
+    case shopNow = "shopNowBut"
     
-    var textBut: String{
-        return rawValue.localized
+    /// Button for payment
+    case payment = "paymentBut"
+    
+    /// Returns the localized text for the button
+    var textBut: String {
+        rawValue
     }
 }
+
+enum  CartButtonState {
+    case shopNow
+    case proceedToPayment
+    
+    var title: Buts {
+        switch self {
+            case .shopNow: return .shopNow
+            case .proceedToPayment: return .payment
+        }
+    }
+}
+

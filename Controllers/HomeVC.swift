@@ -16,6 +16,7 @@ class HomeVC: UIViewController {
     @IBOutlet weak var featuredProductsLabel: UILabel!
     @IBOutlet weak var moreButton: UIButton!
     @IBOutlet weak var featuredProductsCV: UICollectionView!
+    @IBOutlet weak var searchTextField: UITextField!
     
     
     
@@ -48,7 +49,7 @@ class HomeVC: UIViewController {
 
 extension HomeVC {
     func setupUI() {
-        custmeNavigationBar(items: [.MENU , .CART], title: .Home)
+        customNavigationBar(items: [.MENU , .CART], title: .Home)
         bagdeView.addBorder(color: .C6DCEE7, width: 1)
         bagdeView.addRadius(radius: 6)
         collectionsLabel.customLabel(text: Libs.collections.textLib, color: .C161616, size: .size_20, font: .cairoBold , typeFont: .bold)
@@ -61,6 +62,7 @@ extension HomeVC {
         
         collectionCV.registerCVNib(cell: CollectionsHomeCVCell.self, delegate: self, dataSource: self)
         featuredProductsCV.registerCVNib(cell: FeaturedProductsHomeCVCell.self, delegate: self, dataSource: self)
+        searchTextField.customTextField(placeholder: .Search,placeholderColor: .CCCCED0, textColor: .C161616,  ofSize: .size_14 , font: .cairoRegular , styleFont: .regular)
     }
     
     

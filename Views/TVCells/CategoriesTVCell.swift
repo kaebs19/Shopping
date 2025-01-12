@@ -43,7 +43,7 @@ extension CategoriesTVCell {
        
     }
     
-    func getupCellData(cellData: Categories) {
+    func configureCell(cellData: Categories) {
         categoryView.applyBackground(style: cellData.backgroundStyle)
         nameLabel.customLabel(text: cellData.name, color: .CFFFFFF, size: .size_14 , font: .cairoBold , typeFont: .bold)
         categoryImage.image = UIImage(named: cellData.image)

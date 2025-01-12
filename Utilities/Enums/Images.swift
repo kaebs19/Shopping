@@ -34,6 +34,8 @@ enum Images: String, CaseIterable {
     case Women = "m1"
     case Men = "men"
     case Kids = "kids"
+    case Photo_1 = "photo_1"
+    case Photo_2 = "photo_2"
     
     var names: String {
         return rawValue

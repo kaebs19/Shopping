@@ -26,6 +26,7 @@ enum Colors: String {
     case CFF7A59 = "#FF7A59"
     case C6DCEE7 = "#6DCEE7"
     case CCCCED0 = "#CCCED0"
+    case CECEBE9 = "#ECEBE9"
     
 
     
@@ -52,9 +53,14 @@ enum ColorsBackground: String {
     case SteelGray = "#7D7D7D" /// رمادي معدني
     case Lemon = "#FFF44F" /// أصفر ليموني فاتح
     case Aqua = "#00FFFF" /// أزرق فيروزي
-    case SunsetOrange = "#FF0000"
-    case DeepPurple = "#804144"
-
+    case SunsetOrange = "#FF8288" /// color button sale -1
+    case DeepPurple = "#804144" /// color button sale -2
+    
+    case StartGradation = "#32C5FF"
+    case MiddleGradation = "#B620E0"
+    case EndGradation = "#F7B500"
+    
+    
     /// يحول قيمة HEX إلى UIColor.
     /// Converts HEX value to UIColor.
     var uiColor: UIColor? {

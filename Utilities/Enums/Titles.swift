@@ -13,4 +13,6 @@ enum Titles: String, CaseIterable {
     case Categories = "CategoriesTitle"
     case Featured = "FeaturedProductVCTitle"
     case Account = "AccountTitle"
+    case ShoppingBag = "ShoppingBagTitle"
+    case Payment = "PaymentTitle"
 }

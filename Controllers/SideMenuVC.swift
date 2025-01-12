@@ -41,6 +41,8 @@ class SideMenuVC: UIViewController {
         let yesAction = UIAlertAction(title: Alerts.yes.texts, style: .default) { _ in
             // تنفيذ عملية تسجيل الخروج هنا
             print("تم إلغاء تسجيل الخروج.")
+            UserDefault.shared.logout()
+            self.gotToNextVC(storyboard: .Main, identifier: .LoginVC)
         }
         
         // إنشاء الإجراء عند اختيار "لا" (إلغاء)
@@ -66,7 +68,7 @@ extension SideMenuVC {
             }
         }
         
-        nameLabel.customLabel(text: "Mohammed Saleh\(isEnglish() ? Libs.welcome.textLib : Libs.welcome.textLib)", color: .C161616, size: .size_20 , font: .cairoMedium , typeFont: .semibold)
+        nameLabel.customLabel(text: "\(isEnglish() ? Libs.welcome.textLib : Libs.welcome.textLib) Mohammed Saleh", color: .C161616, size: .size_20 , font: .cairoMedium , typeFont: .semibold)
         logoutLabel.customLabel(text: Libs.logout.textLib, color: .C161616, size: .size_14 , font: .cairoRegular , typeFont: .regular)
         
     }
@@ -85,7 +87,8 @@ extension SideMenuVC: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
-            case 0:   print("Done \(indexPath.row)")
+            case 0: gotToNextVC(identifier: .BagVc)
+                print("Done \(indexPath.row)")
             case 1: print("Done \(indexPath.row)")
             case 2: print("Done \(indexPath.row)")
             case 3:print("Done \(indexPath.row)")

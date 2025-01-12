@@ -33,7 +33,7 @@ class CategoryVC: UIViewController {
 extension CategoryVC {
     
     func setupUI() {
-        custmeNavigationBar(items: [.MENU , .CART], title: .Categories)
+        customNavigationBar(items: [.MENU , .CART], title: .Categories)
         setupTV(tv: categoryTV)
         categoryLabel.customLabel(text: Libs.catrgories.textLib, color: .C161616, size: .size_20 , font: .cairoMedium , typeFont: .semibold)
     }
@@ -75,7 +75,7 @@ extension CategoryVC: UITableViewDataSource  {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueCell(index: indexPath, cellType: CategoriesTVCell.self)
-        cell.getupCellData(cellData: catrgoryList[indexPath.row])
+        cell.configureCell(cellData: catrgoryList[indexPath.row])
         return cell
     }
     

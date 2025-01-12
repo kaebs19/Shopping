@@ -39,6 +39,14 @@
 "MenLib"="Men";
 "KidsLib"="Kids";
 "CatrgoriesLib"="Catrgories";
+ "ShoppingBagLib"="Shopping Bag";
+ "MessageEmptyLib"="Your cart is empty. 
+Fill your cart with great products from Our store .";
+"ShoppingTitleLib"="Shopping Bag";
+ "NameSurnameLib"="Name Surname";
+ "CardNumberLib"="Card Number";
+ "ExpirationDateLib"="Exp. Date";
+"CVCLib"="CCV No";
 
 // Buts
 "loginBut"="LOGIN";
@@ -46,14 +54,18 @@
  "signUpBut"="Sign Up";
 "moreBut"="More";
 "saleBut"="Sale";
-
+"shopNowBut"="SHOP NEW";
+"paymentBut"="PAYMENY";
 // TextFileds
 "EmailTF"="E-mail";
 "passwordTF"="Password";
 "againPasswordTF"="Password Again";
 "phoneNumberTF"="966-551902770";
 "SearchTF"="Seatch";
-
+"NameSurnameTF"="Name Surname";
+"CardNumberTF"="Card Number";
+"CVCTF"="CVC";
+"ExpirationDateTF"="Expiration Date";
 
 // Alerts
 "ErrorAlert"="Error";
@@ -77,3 +89,5 @@
 "CategoriesTitle"="Catrgories";
 "FeaturedProductVCTitle"="Featured Product";
 "AccountTitle"="Account";
+"ShoppingBagTitle"="ShoppingBag";
+"PaymentTitle"="Payment";

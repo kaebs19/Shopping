@@ -15,7 +15,6 @@ class FeaturedProductsHomeCVCell: UICollectionViewCell {
     @IBOutlet weak var productNameLabel: UILabel!
     @IBOutlet weak var productPriceLabel: UILabel!
     @IBOutlet weak var isDiscountedLabel: UILabel!
-    @IBOutlet weak var isSelaView: UIView!
     @IBOutlet weak var saleButton: UIButton!
     
     override func awakeFromNib() {
@@ -30,11 +29,16 @@ extension FeaturedProductsHomeCVCell {
     
     func setupUI(){
         bauckageImageView.addRadius(radius: 8)
-        isSelaView.backgroundColor = .clear
-        saleButton.customButton(text: .sale, textColor: .CFFFFFF, ofSize: .size_10, font: .cairoMedium, styleFont: .semibold)
-        saleButton.applyBackground(style: .gradient([
-            
-        ]))
+    
+        
+        [saleButton].forEach { sale in
+            sale.customButton(text: .sale, textColor: .CFFFFFF, ofSize: .size_10, font: .cairoMedium, styleFont: .semibold)
+            sale.applyBackground(style: .gradient([
+                UIColor(hex: ColorsBackground.SunsetOrange.rawValue) ?? .clear,
+                UIColor(hex: ColorsBackground.DeepPurple.rawValue) ?? .clear
+            ]))
+            sale.AddmakeCircularBut(factor: 0.4)
+        }
         
     }
     
@@ -43,7 +47,7 @@ extension FeaturedProductsHomeCVCell {
         productImageView.image = UIImage(named: cellData.featuredImage)
         productNameLabel.text = cellData.featuredName
         productPriceLabel.text = cellData.featuredPrice
-        isSelaView.isHidden = !cellData.isSalde
+        saleButton.isHidden = !cellData.isSalde
         isDiscountedLabel.customLabel(text: cellData.isDiscount ? "10%" : "", color: .CCCCED0, size: .size_14 , font: .cairoRegular , typeFont: .regular)
         
     }

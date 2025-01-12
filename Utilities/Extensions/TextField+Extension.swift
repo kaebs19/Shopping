@@ -32,4 +32,9 @@ extension UITextField {
     func togglePassword() {
         self.isSecureTextEntry.toggle()
     }
+    
+    /// Converts the current text in the text field to uppercase
+    func convertTextToUppercase() {
+        self.text = self.text?.uppercased()
+    }
 }
