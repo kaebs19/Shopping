@@ -25,9 +25,9 @@ extension UIView {
         self.layer.borderColor = color.uiColor?.cgColor
         self.layer.borderWidth = width
     }
-
+    
     // MARK: - الظل (Shadow)
-
+    
     func addShadow(color: Colors = .CE6E6E6, opacity: Float = 0.5, radius: CGFloat = 4.0, offset: CGSize = CGSize(width: 2, height: 2), customPath: UIBezierPath? = nil) {
         self.layer.shadowColor = color.uiColor?.cgColor
         self.layer.shadowOpacity = opacity
@@ -43,7 +43,7 @@ extension UIView {
         layer.shadowOffset = .zero
         layer.masksToBounds = false
     }
-
+    
     
     /// Applies a corner radius to specific corners of the view.
     /// يُطبق نصف قطر زاوية على زوايا محددة من العرض.
@@ -76,7 +76,7 @@ extension UIView {
     }
     
     // MARK: - شكل دائري (Circular)
-
+    
     func makeCircular(radius: CGFloat? = nil) {
         
         if let radius = radius {
@@ -94,7 +94,7 @@ extension UIView {
             case .solid(let color):
                 self.backgroundColor = color
                 self.layer.sublayers?.removeAll{ $0 is CAGradientLayer}
-            
+                
             case .gradient(let colors):
                 self.backgroundColor = .clear
                 self.layer.sublayers?.removeAll{ $0 is CAGradientLayer}
@@ -125,4 +125,15 @@ extension UIView {
         case solid(UIColor)
         case gradient([UIColor])
     }
+    
+    func adjustViewSize(newWidth: CGFloat, newHeight: CGFloat, aspectConstraint: NSLayoutConstraint?) {
+        guard let aspectConstraint = aspectConstraint else { return }
+        // تحديث نسبة العرض إلى الطول
+        aspectConstraint.constant = newHeight / newWidth
+        // تحديث التصميم
+        UIView.animate(withDuration: 0.3) { [weak self] in
+            self?.layoutIfNeeded()
+        }
+    }
+    
 }

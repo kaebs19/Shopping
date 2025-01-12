@@ -554,7 +554,7 @@ Fill your cart with great products from Marier.</string>
                     <connections>
                         <outlet property="cardNumberLabel" destination="36w-0G-KnH" id="V66-7c-4zX"/>
                         <outlet property="cardNumberTextField" destination="JWo-d8-Uqn" id="Gir-4f-rEx"/>
-                        <outlet property="changeValueAspect" destination="YRL-Pp-wqX" id="mmo-Rw-XfA"/>
+                        <outlet property="changeValueAspect" destination="YRL-Pp-wqX" id="uC2-W2-sOm"/>
                         <outlet property="changeValueTrailing" destination="pmz-Yx-fzd" id="TNJ-af-p0q"/>
                         <outlet property="creditView" destination="dhb-UF-111" id="a7l-Be-CH9"/>
                         <outlet property="cvvLab" destination="cXJ-lg-Oyu" id="2D7-0D-3v2"/>

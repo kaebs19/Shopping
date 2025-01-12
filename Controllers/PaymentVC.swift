@@ -55,6 +55,7 @@
         override func viewDidLayoutSubviews() {
             super.viewDidLayoutSubviews()
             setupUI()
+            creditView.adjustViewSize(newWidth: 200, newHeight: 120, aspectConstraint: changeValueAspect)
             
         }
         
@@ -193,25 +194,11 @@
         }
 
         private func formatExpiryDate(_ text: String) -> String {
-            let cleanText = text.replacingOccurrences(of: "/", with: "")
-            
-            // التأكد من أن الشهر لا يتجاوز 12
-            if cleanText.count >= 2 {
-                let month = String(cleanText.prefix(2))
-                if let monthInt = Int(month), monthInt > 12 {
-                    return "MM/YY" // إعادة النص الافتراضي إذا كان الشهر غير صالح
-                }
+            if text.count == 2 && !text.contains("/") {
+                return "\(text)/" // إضافة "/" بعد الشهر
             }
-            
-            // إضافة "/" بعد الشهر إذا تم إدخال شهر صالح
-            if cleanText.count == 2 {
-                return "\(cleanText)/"
-            }
-            
-            // قص النص إلى 5 أحرف كحد أقصى
-            return String(cleanText.prefix(5))
+            return text
         }
-        
         
         private func formatCVV(_ text: String) -> String {
             return String(text.prefix(3)) // تأكد من النص الأصلي
