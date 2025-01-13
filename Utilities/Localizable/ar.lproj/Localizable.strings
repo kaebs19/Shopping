@@ -45,6 +45,9 @@
 "CardNumberLib"="رقم البطاقة";
 "ExpirationDateLib"="تاريخ انتهاء";
 "CVCLib"="رقم التحقق";
+"TotleLib"="الأجمالي";
+"PayLib"="الدفع";
+
 
 // Buts
 "loginBut"="تسجيل دخول";

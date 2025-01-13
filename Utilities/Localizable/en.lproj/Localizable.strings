@@ -47,7 +47,8 @@ Fill your cart with great products from Our store .";
  "CardNumberLib"="Card Number";
  "ExpirationDateLib"="Exp. Date";
 "CVCLib"="CCV No";
-
+"TotleLib"="Total";
+"PayLib"="PAY";
 // Buts
 "loginBut"="LOGIN";
 "forgotPasswordBut"="Forgot your password?";

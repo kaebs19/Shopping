@@ -36,6 +36,12 @@ enum Images: String, CaseIterable {
     case Kids = "kids"
     case Photo_1 = "photo_1"
     case Photo_2 = "photo_2"
+    case Unselected_Object = "Unselected_Object"
+    case Select_Object = "Select_Object"
+    case Fedex = "fedex"
+    case Dhl = "dhl"
+    case china_post = "china_post"
+    
     
     var names: String {
         return rawValue

@@ -44,6 +44,8 @@ enum Libs: String {
     case CardNumber = "CardNumberLib"
     case ExpirationDate = "ExpirationDateLib"
     case CVC = "CVCLib"
+    case Totle = "TotleLib"
+    case Pay = "PayLib"
     
     var textLib: String {
         return rawValue.localized

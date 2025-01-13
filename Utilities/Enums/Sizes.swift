@@ -16,5 +16,5 @@ enum Sizes: CGFloat , CaseIterable {
     case size_18 = 18
     case size_20 = 20
     case size_22 = 22
-
+    case size_28 = 28
 }
