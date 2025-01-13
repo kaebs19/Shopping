@@ -12,4 +12,5 @@ struct Popues {
     var title: String
     var image: String
     var isDefault: Bool
+    var logo: String?
 }

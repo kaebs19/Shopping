@@ -92,4 +92,12 @@ extension UITableViewCell {
     func noSelectionStyleCell(style: UITableViewCell.SelectionStyle = .none) {
         self.selectionStyle = style
     }
+    
+    /// إزالة هوامش الخلية وتعطيل التحديد / Remove cell margins and disable selection
+    func removeCellMarginsAndSelection() {
+        self.layoutMargins = .zero
+        self.preservesSuperviewLayoutMargins = false
+        self.selectionStyle = .none
+    }
+
 }

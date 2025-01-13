@@ -11,24 +11,19 @@ import Foundation
 enum Buts: String {
     /// Button for login action
     case login = "loginBut"
-    
     /// Button for forgot password action
     case forgotPassword = "forgotPasswordBut"
-    
     /// Button for sign-up action
     case signUp = "signUpBut"
-    
     /// Button for more options
     case more = "moreBut"
-    
     /// Button for sales
     case sale = "saleBut"
-    
     /// Button for shopping now
     case shopNow = "shopNowBut"
-    
     /// Button for payment
     case payment = "paymentBut"
+    case Done = "DoneBut"
     
     /// Returns the localized text for the button
     var textBut: String {

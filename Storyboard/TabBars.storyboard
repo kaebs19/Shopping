@@ -202,7 +202,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="dx4-u5-cEt">
-                                        <rect key="frame" x="0.0" y="22.333333333333314" width="345" height="603.66666666666674"/>
+                                        <rect key="frame" x="0.0" y="22.333333333333318" width="345" height="603.66666666666663"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </tableView>
                                 </subviews>
@@ -289,13 +289,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cart_empty" translatesAutoresizingMaskIntoConstraints="NO" id="CYj-c4-Rvs">
-                                <rect key="frame" x="83.333333333333329" y="192" width="226.33333333333337" height="212.66666666666663"/>
+                                <rect key="frame" x="83.333333333333314" y="192" width="226.33333333333337" height="212.66666666666663"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="CYj-c4-Rvs" secondAttribute="height" multiplier="216:203" id="hpg-aM-XMe"/>
                                 </constraints>
                             </imageView>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPO-Jd-T9h">
-                                <rect key="frame" x="83.333333333333329" y="431.66666666666669" width="226.33333333333337" height="61"/>
+                                <rect key="frame" x="83.333333333333314" y="431.66666666666669" width="226.33333333333337" height="61"/>
                                 <string key="text">Your cart is empty. 
 Fill your cart with great products from Marier.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -545,17 +545,17 @@ Fill your cart with great products from Marier.</string>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="Nfr-75-NEW">
                                 <rect key="frame" x="24" y="582.66666666666663" width="345" height="72"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="j9T-pX-4Jb">
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="j9T-pX-4Jb">
                                         <rect key="frame" x="0.0" y="0.0" width="345" height="24"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shipping Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RB8-UG-PLm">
-                                                <rect key="frame" x="0.0" y="0.0" width="215" height="24"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="263" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="zdE-US-L6U" userLabel="Address">
-                                                <rect key="frame" x="265" y="0.0" width="80" height="24"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zdE-US-L6U" userLabel="Address">
+                                                <rect key="frame" x="273" y="0.0" width="72" height="24"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UYS-Rd-nLP">
                                                         <rect key="frame" x="0.0" y="1.6666666666667425" width="48" height="20.333333333333332"/>
@@ -564,7 +564,7 @@ Fill your cart with great products from Marier.</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron-down" translatesAutoresizingMaskIntoConstraints="NO" id="GqQ-BB-NAG">
-                                                        <rect key="frame" x="56" y="0.0" width="24" height="24"/>
+                                                        <rect key="frame" x="48" y="0.0" width="24" height="24"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="GqQ-BB-NAG" secondAttribute="height" multiplier="1:1" id="pUL-Aj-IYd"/>
                                                         </constraints>
@@ -573,17 +573,17 @@ Fill your cart with great products from Marier.</string>
                                             </stackView>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="ene-UV-CbN">
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ene-UV-CbN">
                                         <rect key="frame" x="0.0" y="48" width="345" height="24"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shipping Method" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3qI-Rw-NHH">
-                                                <rect key="frame" x="0.0" y="0.0" width="215" height="24"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="268" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qwW-Eg-9LE" userLabel="Method">
-                                                <rect key="frame" x="265" y="0.0" width="80" height="24"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qwW-Eg-9LE" userLabel="Method">
+                                                <rect key="frame" x="273" y="0.0" width="72" height="24"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPp-uJ-C2q">
                                                         <rect key="frame" x="0.0" y="1.6666666666667425" width="48" height="20.333333333333332"/>
@@ -592,7 +592,7 @@ Fill your cart with great products from Marier.</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron-down" translatesAutoresizingMaskIntoConstraints="NO" id="J9y-Rl-g8O">
-                                                        <rect key="frame" x="56" y="0.0" width="24" height="24"/>
+                                                        <rect key="frame" x="48" y="0.0" width="24" height="24"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="J9y-Rl-g8O" secondAttribute="height" multiplier="1:1" id="2vO-Pr-WEs"/>
                                                         </constraints>
@@ -647,14 +647,14 @@ Fill your cart with great products from Marier.</string>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wws-58-KQY">
-                                <rect key="frame" x="289" y="579.66666666666663" width="80" height="30"/>
+                                <rect key="frame" x="297" y="579.66666666666663" width="72" height="30"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <connections>
                                     <action selector="showAdressButtonTapped:" destination="yz6-0R-gOa" eventType="touchUpInside" id="2sp-yd-FNE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v1I-fj-Uhi">
-                                <rect key="frame" x="289" y="627.66666666666663" width="80" height="30"/>
+                                <rect key="frame" x="297" y="627.66666666666663" width="72" height="30"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <connections>
                                     <action selector="showMethedsButtonTapped:" destination="yz6-0R-gOa" eventType="touchUpInside" id="Lvf-Sy-CIO"/>
@@ -714,7 +714,10 @@ Fill your cart with great products from Marier.</string>
                         <outlet property="nameSurNameTextField" destination="LHA-Aw-4Fw" id="uij-6C-FCk"/>
                         <outlet property="nameSurnameLabel" destination="51Y-B0-ccY" id="G1e-0N-WaO"/>
                         <outlet property="nubmberCardLab" destination="HWD-yJ-0Ph" id="6r7-mp-3Bk"/>
+                        <outlet property="payLabel" destination="V0S-Ch-T5b" id="61p-T4-e1i"/>
                         <outlet property="priceLabel" destination="QYu-sT-UTm" id="egr-KF-V9W"/>
+                        <outlet property="selectAddressLabel" destination="UYS-Rd-nLP" id="5q2-aU-boo"/>
+                        <outlet property="selectMethedLabel" destination="UPp-uJ-C2q" id="5Wl-9S-Kq6"/>
                         <outlet property="shoppingAddressLabel" destination="RB8-UG-PLm" id="bNo-Go-L2Z"/>
                         <outlet property="shoppingMethodLabel" destination="3qI-Rw-NHH" id="EU0-nU-ZEf"/>
                         <outlet property="totalPriceLabel" destination="y3i-Ex-JKs" id="0Rb-Sf-VBx"/>

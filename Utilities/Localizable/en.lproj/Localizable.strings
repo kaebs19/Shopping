@@ -49,6 +49,9 @@ Fill your cart with great products from Our store .";
 "CVCLib"="CCV No";
 "TotleLib"="Total";
 "PayLib"="PAY";
+"ShppingMethodLib"="Shpping Method";
+"SelectLib"="Select";
+
 // Buts
 "loginBut"="LOGIN";
 "forgotPasswordBut"="Forgot your password?";
@@ -57,6 +60,8 @@ Fill your cart with great products from Our store .";
 "saleBut"="Sale";
 "shopNowBut"="SHOP NEW";
 "paymentBut"="PAYMENY";
+"DoneBut"="Done";
+
 // TextFileds
 "EmailTF"="E-mail";
 "passwordTF"="Password";

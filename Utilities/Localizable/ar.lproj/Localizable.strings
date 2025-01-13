@@ -47,6 +47,8 @@
 "CVCLib"="رقم التحقق";
 "TotleLib"="الأجمالي";
 "PayLib"="الدفع";
+"ShppingMethodLib"="طريقة الشحن";
+"SelectLib"="تحديد";
 
 
 // Buts
@@ -57,6 +59,7 @@
 "saleBut"="الخصم";
 "shopNowBut"="تسوق الآن";
 "paymentBut"="المدفوعات";
+"DoneBut"="تحديد";
 
 
 // TextFileds
