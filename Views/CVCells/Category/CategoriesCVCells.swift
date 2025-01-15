@@ -32,4 +32,8 @@ extension CategoriesCVCells {
     func setupUI() {
         mainView.addRadius(radius: 4)
     }
+    
+    func configureCell(cellData:Categories){
+        categoriesImage.image = UIImage(named: cellData.image) ?? UIImage(systemName: "person.fill")
+    }
 }

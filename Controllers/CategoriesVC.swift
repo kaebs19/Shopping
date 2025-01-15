@@ -7,6 +7,13 @@
 
 import UIKit
 
+enum CaategoryType: Int {
+    case newArrivals = 0
+    case shirtsAndBlouses
+    case dresses
+    case jeans
+}
+
 class CategoriesVC: UIViewController {
     
     // MARK: - Outlets
@@ -75,16 +82,20 @@ extension CategoriesVC {
     func setupUI() {
         customNavigationBar(items: [.BACK , .CART , .FLITER], title: .Categories)
         
-        let collectuonViews = [newArrivalsCV , dressesCV , shirtAndBlousesCV , jeansCV]
-        for (index , collectionView) in collectuonViews.enumerated() { collectionView?.tag = index }
-        setupCollectionView(CVS: collectuonViews.compactMap{$0})
+        newArrivalsCV.tag = CaategoryType.newArrivals.rawValue
+        shirtAndBlousesCV.tag = CaategoryType.shirtsAndBlouses.rawValue
+        dressesCV.tag = CaategoryType.dresses.rawValue
+        jeansCV.tag = CaategoryType.jeans.rawValue
+        let collectionViews = [newArrivalsCV , dressesCV , shirtAndBlousesCV , jeansCV]
+        setupCollectionView(CVS: collectionViews.compactMap({ $0 }))
+        
         titleLabel.customLabel(text: Libs.Women.textLib, color: .C161616, size: .size_14 ,font: .cairoBold , typeFont: .semibold)
         
-        let lableAndText = [
+        let sectionTitleLabelsAndTexts = [
             (newArrivalsLabel, Libs.NewArrivals.textLib) , (shirtAndBlousesLabel, Libs.ShirtAndBlouses.textLib) , (dressesLabel, Libs.Dresses.textLib) , (jeansLabel, Libs.Jeans.textLib)
         ]
-        lableAndText.forEach { (lable , text) in
-            lable?.customLabel(text: text, color: .C161616, size: .size_14 , font: .cairoLight , typeFont: .semibold)
+        sectionTitleLabelsAndTexts.forEach { (lable , text) in
+            lable?.customLabel(text: text, color: .C161616, size: .size_14 , font: .cairoBold , typeFont: .regular)
         }
         
         
@@ -107,21 +118,23 @@ extension CategoriesVC {
 extension CategoriesVC: UICollectionViewDelegate  {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        guard let categoryType = CaategoryType(rawValue: collectionView.tag) else { return }
         let storyboard = UIStoryboard(name: Storyboards.TabBars.rawValue , bundle: nil)
         if let detalsVc = storyboard.instantiateViewController(withIdentifier: Identifiers.CategoriesDetalsVC.rawValue) as? CategoriesDetalsVC {
-            switch collectionView.tag {
-                case 0:
-                    detalsVc.selectedCategoryTitle = Libs.NewArrivals.rawValue
+            
+            switch categoryType {
                     
-                case 1:
-                    detalsVc.selectedCategoryTitle = Libs.Dresses.rawValue
-                case 2:
+                case .newArrivals:
+                    detalsVc.selectedCategoryTitle = Libs.NewArrivals.rawValue
+                case .shirtsAndBlouses:
                     detalsVc.selectedCategoryTitle = Libs.ShirtAndBlouses.rawValue
-                case 3:
+                case .dresses:
+                    detalsVc.selectedCategoryTitle = Libs.Dresses.rawValue
+                case .jeans:
                     detalsVc.selectedCategoryTitle = Libs.Jeans.rawValue
-                default:
-                    detalsVc.selectedCategoryTitle = "Unknown Category"
             }
+            
             self.navigationController?.pushViewController(detalsVc, animated: true)
         }
     }
@@ -131,29 +144,41 @@ extension CategoriesVC: UICollectionViewDelegate  {
 // MARK: - UITableViewDataSource
 extension CategoriesVC: UICollectionViewDataSource  {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        switch collectionView.tag {
-            case 0:
+        
+        guard let categoryType = CaategoryType(rawValue: collectionView.tag) else { return 0 }
+        
+        switch categoryType {
+            case .newArrivals:
                 return newArrivalsList.count
-            case 1:
+            case .shirtsAndBlouses:
                 return shirtAndBlousesList.count
-            case 2:
+            case .dresses:
                 return dressesList.count
-            case 3:
+            case .jeans:
                 return jeansList.count
-            default:
-                return 0
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        switch collectionView.tag {
-            case 0 , 1 , 2 , 3 :
-                let cell = collectionView.dequeue(cellType: CategoriesCVCells.self, for: indexPath)
-                return cell
-            default:
-                return UICollectionViewCell()
+        
+        guard let categoryType = CaategoryType(rawValue: collectionView.tag) else { return UICollectionViewCell() }
+        let cell = collectionView.dequeue(cellType: CategoriesCVCells.self, for: indexPath)
+        let data: Categories
+        
+        switch categoryType {
+                
+            case .newArrivals:
+                data = newArrivalsList[indexPath.row]
+            case .shirtsAndBlouses:
+                data = shirtAndBlousesList[indexPath.row]
+            case .dresses:
+                data = dressesList[indexPath.row]
+            case .jeans:
+                data = jeansList[indexPath.row]
         }
         
+        cell.configureCell(cellData: data)
+        return cell
     }
     
     
@@ -161,22 +186,24 @@ extension CategoriesVC: UICollectionViewDataSource  {
 
 extension CategoriesVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let numberOfCells: CGFloat = 4
-        let spacing: CGFloat = 24
-        let collectionViewWidth = collectionView.bounds.width
-        // المساحة المتاحة للخلايا بعد خصم المسافات
-        let availableWidth = collectionViewWidth - (numberOfCells - 1) * spacing
-        // عرض الخلية
-        let cellWidth = availableWidth / numberOfCells
-        // ارتفاع الخلية ثابت (94)
-        let cellHeight: CGFloat = 94
         
-        switch collectionView.tag {
-            case 0, 1 , 2 , 3:
+        guard let categoryType = CaategoryType(rawValue: collectionView.tag) else { return .zero }
+        
+        switch categoryType {
+                
+            case .newArrivals , .shirtsAndBlouses ,  .dresses,  .jeans:
+                let numberOfCells: CGFloat = 4
+                let spacing: CGFloat = 24
+                let collectionViewWidth = collectionView.bounds.width
+                // المساحة المتاحة للخلايا بعد خصم المسافات
+                let availableWidth = collectionViewWidth - (numberOfCells - 1) * spacing
+                // عرض الخلية
+                let cellWidth = availableWidth / numberOfCells
+                // ارتفاع الخلية ثابت (94)
+                let cellHeight: CGFloat = 94
                 return CGSize(width: cellWidth, height: cellHeight)
-            default :
-                return .zero
         }
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {

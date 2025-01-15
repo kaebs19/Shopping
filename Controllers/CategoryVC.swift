@@ -25,7 +25,11 @@ class CategoryVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        hideOrShowTabBar(hide: false)
     }
     
 }

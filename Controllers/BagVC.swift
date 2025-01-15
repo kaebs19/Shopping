@@ -23,6 +23,10 @@ class BagVC: UIViewController {
         Bags(name: "Puff-sleeved Blouse", description: "Grey, X-Large, Cott...", price: "39,99 RS", image: "Photo_4", deliveryDate: "8-10 Nov.")
     ]
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        customNavigationBar(items: [.BACK , .MENU], title: .ShoppingBag , moveBackToRight: true)
+    }
     
     // MARK: - View Lifecycle
     override func viewDidLoad() {

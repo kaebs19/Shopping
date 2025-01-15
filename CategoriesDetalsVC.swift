@@ -7,18 +7,16 @@
 
 import UIKit
 
+
 class CategoriesDetalsVC: UIViewController {
     
     // MARK: - Outlets
     @IBOutlet weak var productsDatelsCV: UICollectionView!
-
+    @IBOutlet weak var titleLable: UILabel!
     // MARK: - Variables - Arry
     var selectedCategoryTitle: String?
-    // MARK: - Variables - Arry
-    
     var currentProducts: [Categories] = []
 
-    
     var newArrivalsList: [Categories] = [
         .init(name: "Puff-sleeved Dress", image: "Product_N_1", background: [.Background] , price: "$39" , discount: "$59"),
         .init(name: "Rib-knit Sweater", image: "Product_N_2", background: [.Background] , price: "$49"),
@@ -64,9 +62,11 @@ extension CategoriesDetalsVC{
     
     // MARK: - UI Setup
     func setupUI(){
-        self.title = selectedCategoryTitle
-        customNavigationBar(items: [.BACK , .FLITER , .CART], title: .none)
         setupCollectionView(cv: productsDatelsCV)
+        self.titleLable.text = selectedCategoryTitle
+        customNavigationBar(items: [.BACK , .FLITER , .CART], title: .none)
+        
+        titleLable.customLabel(text: selectedCategoryTitle?.localized ?? "", color: .C161616, size: .size_20 , font: .cairoBold, typeFont: .semibold)
         
         switch selectedCategoryTitle{
             case Libs.NewArrivals.rawValue:
@@ -80,11 +80,16 @@ extension CategoriesDetalsVC{
             default:
                 currentProducts = []
         }
+        
     }
     
     
     private func setupCollectionView(cv: UICollectionView){
+        productsDatelsCV.setScrollDirecton(.vertical)
         productsDatelsCV.configureCVCell(cell: ProductDatelsCVCell.self, delegate: self, dataSource: self)
+        productsDatelsCV.hideScrollIndicators(hideHorizontal: true , hideVertical: true)
+        productsDatelsCV.enableFastScrollByTouch(true)
+        productsDatelsCV.enableScrollByTouch(true)
     }
 }
 
@@ -103,7 +108,7 @@ extension CategoriesDetalsVC: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeue(cellType: ProductDatelsCVCell.self, for: indexPath)
         let product = currentProducts[indexPath.row]
-        
+        cell.configureCell(cellData: product)
         return cell
 
     }
@@ -116,13 +121,11 @@ extension CategoriesDetalsVC: UICollectionViewDelegateFlowLayout {
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
 
-        // نريد عنصرين في كل صف
+        //  عنصرين في كل صف
         let numberOfCellsPerRow: CGFloat = 2
         let horizontalSpacing: CGFloat = 38   // المسافة الأفقية بين الخليتين
-        
         // إجمالي المسافة الأفقية (بين العناصر) في الصف الواحد
         let totalHorizontalSpacing = (numberOfCellsPerRow - 1) * horizontalSpacing
-        
         // العرض الصافي المتبقي للخلايا بعد خصم المسافات
         let availableWidth = collectionView.frame.width
                             - collectionView.contentInset.left
@@ -133,7 +136,7 @@ extension CategoriesDetalsVC: UICollectionViewDelegateFlowLayout {
         let cellWidth = availableWidth / numberOfCellsPerRow
         
         // ارتفاع ثابت للخلية حسب التصميم
-        let cellHeight: CGFloat = 224
+        let cellHeight: CGFloat = 240
         
         return CGSize(width: cellWidth, height: cellHeight)
     }

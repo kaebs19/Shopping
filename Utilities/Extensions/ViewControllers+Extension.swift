@@ -98,6 +98,20 @@ extension UIViewController {
     }
     
     func hideOrShowTabBar(hide: Bool = true) {
+        guard let tabBar = tabBarController?.tabBar else { return }
+        
+        UIView.animate(withDuration: 0.3, animations: {
+            tabBar.isHidden = hide
+        })
+        if !hide{
+            // إعادة تطبيق التخصيص عند إظهار TabBar
+            tabBar.addShadowToTabBar()
+            tabBar.customizeTabBarIconsAndTitles(tabBarItems: TabBars().tabBarItems)
+            tabBar.appFont(font: .SemiBold)
+            tabBar.adjustIconPositions()
+
+        }
+        
         self.tabBarController?.tabBar.isHidden = hide
         self.tabBarController?.tabBar.isTranslucent = hide
     }
@@ -118,7 +132,7 @@ extension UIViewController {
         return password.count >= 6
     }
     
-    func customNavigationBar(items: [NavigationBar] , title: Titles?) {
+    func customNavigationBar(items: [NavigationBar] , title: Titles? ,moveBackToRight: Bool = false ) {
         
         var rightBar: [UIBarButtonItem] = []
         var leftBar: [UIBarButtonItem] = []
@@ -132,7 +146,14 @@ extension UIViewController {
                 case .CART:
                     rightBar.append(UIBarButtonItem(image: UIImage(named: Images.Cart.names)?.withRenderingMode(.alwaysOriginal), style: UIBarButtonItem.Style.plain, target: self, action: #selector(showCartButTappes)))
                 case .BACK:
-                    leftBar.append(UIBarButtonItem(image: UIImage(named: Images.Previous_icon.names) ?? UIImage(systemName: "arrowshape.turn.up.backward.fill"), style: UIBarButtonItem.Style.plain, target: self, action: #selector(showBlackButTappes)))
+                    let backButton = UIBarButtonItem(image: UIImage(named: Images.Previous_icon.names) ?? UIImage(systemName: "arrowshape.turn.up.backward.fill"), style: .plain, target: self, action: #selector(showBlackButTappes))
+                    backButton.tintColor = .black
+                    if  moveBackToRight{
+                        rightBar.append(backButton)
+                    } else {
+                        leftBar.append(backButton)
+                    }
+                    
                     leftBar.last?.tintColor = .black
                 case .FLITER:
                     rightBar.append(UIBarButtonItem(image: UIImage(named: Images.Filter.names)?.withRenderingMode(.alwaysOriginal), style: UIBarButtonItem.Style.plain, target: self, action: #selector(showFliterButTappes)))

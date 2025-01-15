@@ -35,6 +35,14 @@ extension TabBars {
         tabBar.appFont(font: .SemiBold)
         tabBar.adjustIconPositions()
     }
+    
+   /// إعادة تطبيق التخصيص عند إظهار TabBar
+    func applyTabBarCustomization() {
+        tabBar.addShadowToTabBar()
+        tabBar.customizeTabBarIconsAndTitles(tabBarItems: tabBarItems)
+        tabBar.appFont(font: .SemiBold)
+        tabBar.adjustIconPositions()
+    }
 
 }
 

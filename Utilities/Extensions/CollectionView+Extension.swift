@@ -12,17 +12,17 @@ import UIKit
 
 extension UICollectionView {
     
+    /// تغيير اتجاه التمرير لـ UICollectionView.
+    /// - Parameter direction: الاتجاه المطلوب (أفقي أو رأسي).
+    func setScrollDirecton(_ direction: UICollectionView.ScrollDirection) {
+        if let layout = self.collectionViewLayout as? UICollectionViewFlowLayout {
+            layout.scrollDirection = direction
+        }
+    }
+    
     /// Registers a UICollectionViewCell using a nib file and sets the delegate and dataSource.
-    /// - Parameters:
-    ///   - cell: The UICollectionViewCell type to register.
-    ///   - delegate: The object that acts as the delegate for the collection view.
-    ///   - dataSource: The object that acts as the data source for the collection view.
-    ///
     /// تقوم بتسجيل خلية UICollectionView باستخدام ملف nib وتعيين الـ delegate و dataSource.
-    /// - المعلمات:
-    ///   - cell: نوع الخلية المراد تسجيلها.
-    ///   - delegate: الكائن الذي يعمل كـ delegate للـ UICollectionView.
-    ///   - dataSource: الكائن الذي يعمل كـ dataSource للـ UICollectionView.
+ 
     func configureCVCell<Cell: UICollectionViewCell>(
         cell: Cell.Type,
         delegate: UICollectionViewDelegate,
@@ -55,6 +55,42 @@ extension UICollectionView {
         let cellName = String(describing: Cell.self)
         self.register(Cell.self, forCellWithReuseIdentifier: cellName)
     }
+    
+    /// تفعيل أو تعطيل التمرير في UICollectionView.
+    func hideScrollIndicators(hideHorizontal: Bool = true , hideVertical: Bool = true) {
+        self.showsVerticalScrollIndicator = !hideVertical
+        self.showsHorizontalScrollIndicator = !hideHorizontal
+    }
+    
+    /// تفعيل أو تعطيل التمرير باللمس.
+    /// - Parameter isEnabled: تفعيل التمرير باللمس إذا كان `true`، وتعطيله إذا كان `false`.
+    func enableScrollByTouch(_ isEnabled: Bool) {
+        self.isScrollEnabled = isEnabled
+    }
+    
+    /// تفعيل أو تعطيل التمرير باللمس السريع.
+    /// - Parameter isEnabled: تفعيل التمرير باللمس السريع إذا كان `true`، وتعطيله إذا كان `false`.
+    func enableFastScrollByTouch(_ isEnabled: Bool) {
+        self.decelerationRate = isEnabled ? .fast : .normal
+    }
+
+    
+    /// تحديث البيانات مع إمكانية إضافة تأثيرات مرئية.
+    /// - Parameter completion: كتلة الإغلاق التي يتم تنفيذها بعد انتهاء التحديث.
+    func reloadDataWithAnimation(completion: (() -> Void)? = nil) {
+        UIView.transition(with: self, duration: 0.3, options: .transitionCrossDissolve, animations: {
+            self.reloadData()
+        }, completion: { _ in
+            completion?()
+        })
+    }
+
+    /// إعادة تحميل خلية معينة.
+    /// - Parameter indexPath: موقع الخلية المراد إعادة تحميلها.
+    func reloadItem(at indexPath: IndexPath) {
+        self.reloadItems(at: [indexPath])
+    }
+
     
     /// Dequeues a reusable UICollectionViewCell with a specified identifier.
     /// - Parameters:
@@ -100,4 +136,24 @@ extension UICollectionViewFlowLayout {
     open override var flipsHorizontallyInOppositeLayoutDirection: Bool {
         return isEnglish() ? false : true
     }
+    
+    /// ضبط المسافات بين الخلايا.
+    /// - Parameters:
+    ///   - spacing: المسافة بين الخلايا.
+    ///   - direction: اتجاه التخطيط (أفقي أو رأسي).
+    func setItemSpacing(_ spacing: CGFloat, direction: UICollectionView.ScrollDirection) {
+        self.minimumLineSpacing = spacing
+        self.minimumInteritemSpacing = spacing
+        self.scrollDirection = direction
+    }
+    
+    /// ضبط حجم الخلايا.
+    /// - Parameter size: الحجم المطلوب للخلايا.
+    func setItemSize(_ size: CGSize) {
+        self.itemSize = size
+    }
+
+
 }
+
+

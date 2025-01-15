@@ -497,8 +497,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Arrivals" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCJ-9c-zwy">
+                                <rect key="frame" x="24" y="79" width="349" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SzN-bD-cvF">
-                                <rect key="frame" x="20" y="79" width="353" height="739"/>
+                                <rect key="frame" x="20" y="115" width="353" height="703"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3Lg-MO-xT4">
                                     <size key="itemSize" width="128" height="128"/>
@@ -521,19 +527,23 @@
                         <viewLayoutGuide key="safeArea" id="iew-8Q-FPW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="SzN-bD-cvF" firstAttribute="top" secondItem="qCJ-9c-zwy" secondAttribute="bottom" constant="15" id="8wy-gK-9QD"/>
                             <constraint firstItem="iew-8Q-FPW" firstAttribute="trailing" secondItem="SzN-bD-cvF" secondAttribute="trailing" constant="20" id="9t8-ep-T6X"/>
                             <constraint firstItem="iew-8Q-FPW" firstAttribute="bottom" secondItem="SzN-bD-cvF" secondAttribute="bottom" id="J7O-2r-Fo1"/>
+                            <constraint firstItem="qCJ-9c-zwy" firstAttribute="top" secondItem="iew-8Q-FPW" secondAttribute="top" constant="20" id="NPm-yX-Skm"/>
+                            <constraint firstItem="qCJ-9c-zwy" firstAttribute="leading" secondItem="iew-8Q-FPW" secondAttribute="leading" constant="24" id="faK-DO-ZV1"/>
                             <constraint firstItem="SzN-bD-cvF" firstAttribute="leading" secondItem="iew-8Q-FPW" secondAttribute="leading" constant="20" id="iy7-sd-qNC"/>
-                            <constraint firstItem="SzN-bD-cvF" firstAttribute="top" secondItem="iew-8Q-FPW" secondAttribute="top" constant="20" id="zgt-bW-KJ0"/>
+                            <constraint firstItem="iew-8Q-FPW" firstAttribute="trailing" secondItem="qCJ-9c-zwy" secondAttribute="trailing" constant="20" id="pkD-gG-zRZ"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="productsDatelsCV" destination="SzN-bD-cvF" id="VuM-bm-7vP"/>
+                        <outlet property="titleLable" destination="qCJ-9c-zwy" id="Z7u-FW-T41"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aNF-at-fpI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1900" y="1462"/>
+            <point key="canvasLocation" x="-1900" y="1461.9718309859156"/>
         </scene>
         <!--CategoryVC-->
         <scene sceneID="vwF-JK-qul">
