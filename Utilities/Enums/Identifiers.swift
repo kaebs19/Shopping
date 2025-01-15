@@ -20,5 +20,7 @@ enum Identifiers: String {
     case CartVC = "CartVC"
     case PaymentVC = "PaymentVC"
     case BagVc = "BagVC"
+    case CategoriesVC = "CategoriesVC"
+    case CategoriesDetalsVC = "CategoriesDetalsVC"
     
 }

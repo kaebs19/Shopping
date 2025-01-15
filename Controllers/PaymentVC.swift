@@ -191,7 +191,7 @@ extension PaymentVC {
         cvvLabel.customLabel(text: Libs.CVC.textLib, color: .C110F24, size: .size_12)
         cvvTextField.customTextField(placeholder: .CVC, placeholderColor: .CF7F7F7, textColor: .C161616, ofSize: .size_14)
         [selectMethedLabel , selectAddressLabel].forEach { select in
-            select.customLabel(text: Libs.Select.textLib, color: .C000000, size: .size_14 ,font: .cairoRegular ,typeFont: .regular)
+            select.customLabel(text: Libs.Select.textLib, color: .C000000, size: .size_14 ,font: .cairoRegular ,typeFont: .regular , direction: .Left)
         }
         shoppingAddressLabel.customLabel(text: Libs.ShippingAdress.textLib, color: .C161616, size: .size_16 , font: .cairoBold , typeFont: .semibold)
         shoppingMethodLabel.customLabel(text: Libs.ShppingMethod.textLib, color: .C161616, size: .size_16 , font: .cairoBold , typeFont: .semibold)

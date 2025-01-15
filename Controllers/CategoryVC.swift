@@ -54,10 +54,15 @@ extension CategoryVC: UITableViewDelegate  {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
-            case 0: print("Done pressed in \(indexPath.row)")
-            case 1:  print("Done pressed in \(indexPath.row)")
-            case 2:  print("Done pressed in \(indexPath.row)")
-            default: print("Done pressed in \(indexPath.row)")
+            case 0:
+                print("Done pressed in \(indexPath.row)")
+                gotToNextVC(identifier: .CategoriesVC)
+            case 1:
+                print("Done pressed in \(indexPath.row)")
+            case 2:
+                print("Done pressed in \(indexPath.row)")
+            default:
+                print("Done pressed in \(indexPath.row)")
         }
     }
     

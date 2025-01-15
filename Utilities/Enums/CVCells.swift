@@ -11,4 +11,7 @@ enum CVCells: String, CaseIterable {
     
     case CollectionsHomeCVCell = "CollectionsHomeCVCell"
     case FeaturedProductsHomeCVCell = "FeaturedProductsHomeCVCell"
+    case CategoriesCVCells = "CategoriesCVCells"
+    case ProductDatelsCVCell = "ProductDatelsCVCell"
+    
 }

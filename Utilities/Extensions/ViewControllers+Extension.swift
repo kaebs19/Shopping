@@ -132,8 +132,8 @@ extension UIViewController {
                 case .CART:
                     rightBar.append(UIBarButtonItem(image: UIImage(named: Images.Cart.names)?.withRenderingMode(.alwaysOriginal), style: UIBarButtonItem.Style.plain, target: self, action: #selector(showCartButTappes)))
                 case .BACK:
-                    leftBar.append(UIBarButtonItem(image: UIImage(named: Images.Back.names)?.withRenderingMode(.alwaysOriginal), style: UIBarButtonItem.Style.plain, target: self, action: #selector(showBlackButTappes)))
-                    
+                    leftBar.append(UIBarButtonItem(image: UIImage(named: Images.Previous_icon.names) ?? UIImage(systemName: "arrowshape.turn.up.backward.fill"), style: UIBarButtonItem.Style.plain, target: self, action: #selector(showBlackButTappes)))
+                    leftBar.last?.tintColor = .black
                 case .FLITER:
                     rightBar.append(UIBarButtonItem(image: UIImage(named: Images.Filter.names)?.withRenderingMode(.alwaysOriginal), style: UIBarButtonItem.Style.plain, target: self, action: #selector(showFliterButTappes)))
             }
@@ -178,7 +178,7 @@ extension UIViewController {
     }
     
     @objc func showBlackButTappes(){
-        
+        gotToPreviousVC()
     }
     @objc func showFliterButTappes(){
         

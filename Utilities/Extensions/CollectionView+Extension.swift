@@ -23,7 +23,7 @@ extension UICollectionView {
     ///   - cell: نوع الخلية المراد تسجيلها.
     ///   - delegate: الكائن الذي يعمل كـ delegate للـ UICollectionView.
     ///   - dataSource: الكائن الذي يعمل كـ dataSource للـ UICollectionView.
-    func registerCVNib<Cell: UICollectionViewCell>(
+    func configureCVCell<Cell: UICollectionViewCell>(
         cell: Cell.Type,
         delegate: UICollectionViewDelegate,
         dataSource: UICollectionViewDataSource

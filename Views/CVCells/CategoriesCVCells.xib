@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CategoriesCVCells" customModule="Shopping" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="202" height="238"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="202" height="238"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ACt-sC-Gcz">
+                        <rect key="frame" x="0.0" y="0.0" width="202" height="238"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Product_Small_Photo" translatesAutoresizingMaskIntoConstraints="NO" id="Tvr-bB-w0V">
+                                <rect key="frame" x="0.0" y="0.0" width="202" height="238"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92549019607843142" green="0.92156862745098034" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Tvr-bB-w0V" firstAttribute="top" secondItem="ACt-sC-Gcz" secondAttribute="top" id="MCN-so-gjD"/>
+                            <constraint firstAttribute="trailing" secondItem="Tvr-bB-w0V" secondAttribute="trailing" id="lne-0Y-TTN"/>
+                            <constraint firstAttribute="bottom" secondItem="Tvr-bB-w0V" secondAttribute="bottom" id="p3Q-9u-6Ac"/>
+                            <constraint firstItem="Tvr-bB-w0V" firstAttribute="leading" secondItem="ACt-sC-Gcz" secondAttribute="leading" id="xQl-hf-bZM"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="ACt-sC-Gcz" secondAttribute="bottom" id="1BJ-lt-aHW"/>
+                <constraint firstAttribute="trailing" secondItem="ACt-sC-Gcz" secondAttribute="trailing" id="KuI-jC-wNZ"/>
+                <constraint firstItem="ACt-sC-Gcz" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Ssb-et-O9M"/>
+                <constraint firstItem="ACt-sC-Gcz" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="qN1-xt-kMe"/>
+            </constraints>
+            <size key="customSize" width="202" height="238"/>
+            <connections>
+                <outlet property="categoriesImage" destination="Tvr-bB-w0V" id="E51-sI-ZtX"/>
+                <outlet property="mainView" destination="ACt-sC-Gcz" id="yw3-xf-GbJ"/>
+            </connections>
+            <point key="canvasLocation" x="225.95419847328245" y="85.91549295774648"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Product_Small_Photo" width="73" height="128"/>
+    </resources>
+</document>

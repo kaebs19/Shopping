@@ -51,6 +51,10 @@ Fill your cart with great products from Our store .";
 "PayLib"="PAY";
 "ShppingMethodLib"="Shpping Method";
 "SelectLib"="Select";
+"NewArrivalsLib"="New Arrivals";
+"DressesLib"="Dresses";
+"ShirtAndBlousesLib"="Shirt & Blouses";
+"JeansLib"="Jeans";
 
 // Buts
 "loginBut"="LOGIN";

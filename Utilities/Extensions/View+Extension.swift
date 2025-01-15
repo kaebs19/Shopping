@@ -136,4 +136,17 @@ extension UIView {
         }
     }
     
+    func addAnimateBounceView(duration: TimeInterval = 0.5, scale: CGFloat = 1.1) {
+        UIView.animate(withDuration: duration, animations: {
+            self.transform = CGAffineTransform(scaleX: scale, y: scale)
+        }) { _ in
+            UIView.animate(withDuration: duration) {
+                self.transform = CGAffineTransform.identity
+            }
+        }
+    }
+
+    
 }
+
+                           

@@ -81,7 +81,7 @@ import UIKit
         }
         
         /// Add  Animation
-        func animateBounce(duration: TimeInterval = 0.5, scale: CGFloat = 1.1) {
+        func addAnimateBounce(duration: TimeInterval = 0.5, scale: CGFloat = 1.1) {
             UIView.animate(withDuration: duration, animations: {
                 self.transform = CGAffineTransform(scaleX: scale, y: scale)
             }) { _ in

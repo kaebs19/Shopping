@@ -60,8 +60,8 @@ extension HomeVC {
             more?.customButton(text: .more, textColor: .C6DCEE7, ofSize: .size_12, font: .cairoBold, styleFont: .bold )
         }
         
-        collectionCV.registerCVNib(cell: CollectionsHomeCVCell.self, delegate: self, dataSource: self)
-        featuredProductsCV.registerCVNib(cell: FeaturedProductsHomeCVCell.self, delegate: self, dataSource: self)
+        collectionCV.configureCVCell(cell: CollectionsHomeCVCell.self, delegate: self, dataSource: self)
+        featuredProductsCV.configureCVCell(cell: FeaturedProductsHomeCVCell.self, delegate: self, dataSource: self)
         searchTextField.customTextField(placeholder: .Search,placeholderColor: .CCCCED0, textColor: .C161616,  ofSize: .size_14 , font: .cairoRegular , styleFont: .regular)
     }
     

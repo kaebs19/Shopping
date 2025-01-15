@@ -59,7 +59,7 @@ enum ColorsBackground: String {
     case StartGradation = "#32C5FF"
     case MiddleGradation = "#B620E0"
     case EndGradation = "#F7B500"
-    
+    case Background = "#ECEBE9"
     
     /// يحول قيمة HEX إلى UIColor.
     /// Converts HEX value to UIColor.

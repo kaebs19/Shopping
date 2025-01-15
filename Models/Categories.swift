@@ -15,6 +15,8 @@ import UIKit
         var name: String
         var image: String
         var background: [ColorsBackground]
+        var price: String?
+        var discount: String?
         
         /// يحول قائمة الألوان إلى نمط خلفية (صلبة أو متدرجة).
         /// Converts the list of colors to a background style (solid or gradient).

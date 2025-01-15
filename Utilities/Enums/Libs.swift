@@ -48,6 +48,11 @@ enum Libs: String {
     case Totle = "TotleLib"
     case Pay = "PayLib"
     case ShppingMethod = "ShppingMethodLib"
+    case NewArrivals = "NewArrivalsLib"
+    case Dresses = "DressesLib"
+    case ShirtAndBlouses  = "ShirtAndBlousesLib"
+    case Jeans = "JeansLib"
+    
     
     var textLib: String {
         return rawValue.localized

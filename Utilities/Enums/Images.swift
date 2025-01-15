@@ -19,11 +19,14 @@ enum Images: String, CaseIterable {
     case Featured_unselected = "Featured_unSelect"
     case Account_TabBar = "Account"
     case Account_unselected = "Account_unSelect"
-    case Back = "Back"
+    case Back = "left_icon"
     case Cart = "Cart"
     case Filter = "Filter"
     case Menu = "Menu"
+    case Back_Icon = "Back"
+    case Previous_icon = "Previous_icon"
     
+
     case Address_menu = "address"
     case Help_circle_menu = "help-circle"
     case Language_menu = "language"

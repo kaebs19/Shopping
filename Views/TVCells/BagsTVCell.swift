@@ -54,7 +54,7 @@ extension BagsTVCell {
         noSelectionStyleCell()
         productImageView.addBarder(width: 0.5)
         productImageView.backgroundColor = UIColor(named: Colors.CECEBE9.rawValue)
-        productImageView.animateBounce()
+        productImageView.addAnimateBounce()
     }
     
     func configureCell(cellData: Bags){
