@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CategoryVC: UIViewController {
+class CategoriesListVC: UIViewController {
     
     // MARK: - Outlets
     @IBOutlet weak var categoryLabel: UILabel!
@@ -15,7 +15,7 @@ class CategoryVC: UIViewController {
     
     
     // MARK: - Variables Arry
-    var catrgoryList: [Categories] = [
+    var categoryList: [Categories] = [
         Categories(name: Libs.Women.textLib, image: Images.Women.names, background: [.RoseGold , .Lavender]),
         Categories(name: Libs.Men.textLib, image: Images.Men.names, background: [.NavyBlue , .SteelGray]),
         Categories(name: Libs.Kids.textLib, image: Images.Kids.names, background: [.Lemon , .Aqua]),
@@ -34,7 +34,7 @@ class CategoryVC: UIViewController {
     
 }
 
-extension CategoryVC {
+extension CategoriesListVC {
     
     func setupUI() {
         customNavigationBar(items: [.MENU , .CART], title: .Categories)
@@ -54,7 +54,7 @@ extension CategoryVC {
 
 // MARK: - UITableViewDelegate
 
-extension CategoryVC: UITableViewDelegate  {
+extension CategoriesListVC: UITableViewDelegate  {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
@@ -76,15 +76,15 @@ extension CategoryVC: UITableViewDelegate  {
     
 }
 
-extension CategoryVC: UITableViewDataSource  {
+extension CategoriesListVC: UITableViewDataSource  {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return catrgoryList.count
+        return categoryList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueCell(index: indexPath, cellType: CategoriesTVCell.self)
-        cell.configureCell(cellData: catrgoryList[indexPath.row])
+        cell.configureCell(cellData: categoryList[indexPath.row])
         return cell
     }
     

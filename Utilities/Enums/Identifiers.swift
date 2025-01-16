@@ -13,7 +13,7 @@ enum Identifiers: String {
     case ForgotPasswordVC = "ForgotPasswordVC"
     case TabBars = "TabBars"
     case HomeVC = "HomeVC"
-    case CategoryVC = "CategoryVC"
+    case CategoriesListVC = "CategoriesListVC"
     case FeaturedProductVC = "FeaturedProductVC"
     case AccountVC = "AccountVC"
     case SideMenuVC = "SideMenuVC"

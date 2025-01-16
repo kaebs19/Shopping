@@ -7,7 +7,7 @@
 
 import UIKit
 
-enum CaategoryType: Int {
+enum CategoryType: Int {
     case newArrivals = 0
     case shirtsAndBlouses
     case dresses
@@ -82,10 +82,10 @@ extension CategoriesVC {
     func setupUI() {
         customNavigationBar(items: [.BACK , .CART , .FLITER], title: .Categories)
         
-        newArrivalsCV.tag = CaategoryType.newArrivals.rawValue
-        shirtAndBlousesCV.tag = CaategoryType.shirtsAndBlouses.rawValue
-        dressesCV.tag = CaategoryType.dresses.rawValue
-        jeansCV.tag = CaategoryType.jeans.rawValue
+        newArrivalsCV.tag = CategoryType.newArrivals.rawValue
+        shirtAndBlousesCV.tag = CategoryType.shirtsAndBlouses.rawValue
+        dressesCV.tag = CategoryType.dresses.rawValue
+        jeansCV.tag = CategoryType.jeans.rawValue
         let collectionViews = [newArrivalsCV , dressesCV , shirtAndBlousesCV , jeansCV]
         setupCollectionView(CVS: collectionViews.compactMap({ $0 }))
         
@@ -119,7 +119,7 @@ extension CategoriesVC: UICollectionViewDelegate  {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        guard let categoryType = CaategoryType(rawValue: collectionView.tag) else { return }
+        guard let categoryType = CategoryType(rawValue: collectionView.tag) else { return }
         let storyboard = UIStoryboard(name: Storyboards.TabBars.rawValue , bundle: nil)
         if let detalsVc = storyboard.instantiateViewController(withIdentifier: Identifiers.CategoriesDetalsVC.rawValue) as? CategoriesDetalsVC {
             
@@ -145,7 +145,7 @@ extension CategoriesVC: UICollectionViewDelegate  {
 extension CategoriesVC: UICollectionViewDataSource  {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        guard let categoryType = CaategoryType(rawValue: collectionView.tag) else { return 0 }
+        guard let categoryType = CategoryType(rawValue: collectionView.tag) else { return 0 }
         
         switch categoryType {
             case .newArrivals:
@@ -161,7 +161,7 @@ extension CategoriesVC: UICollectionViewDataSource  {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        guard let categoryType = CaategoryType(rawValue: collectionView.tag) else { return UICollectionViewCell() }
+        guard let categoryType = CategoryType(rawValue: collectionView.tag) else { return UICollectionViewCell() }
         let cell = collectionView.dequeue(cellType: CategoriesCVCells.self, for: indexPath)
         let data: Categories
         
@@ -187,7 +187,7 @@ extension CategoriesVC: UICollectionViewDataSource  {
 extension CategoriesVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        guard let categoryType = CaategoryType(rawValue: collectionView.tag) else { return .zero }
+        guard let categoryType = CategoryType(rawValue: collectionView.tag) else { return .zero }
         
         switch categoryType {
                 

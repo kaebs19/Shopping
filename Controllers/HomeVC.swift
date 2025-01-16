@@ -35,7 +35,6 @@ class HomeVC: UIViewController {
         FeaturedProducts(featuredName: "Red Overalls", featuredImage: "m3", featuredPrice: "$83", isDiscount: false, isSalde: false, backgroundColor: "Background_Sale"),
         FeaturedProducts(featuredName: "Red Overalls", featuredImage: "m4", featuredPrice: "$51", isDiscount: false, isSalde: true, backgroundColor: "Background_Sale")
 
-
         ]
         
     

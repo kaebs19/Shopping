@@ -52,7 +52,7 @@ enum Libs: String {
     case Dresses = "DressesLib"
     case ShirtAndBlouses  = "ShirtAndBlousesLib"
     case Jeans = "JeansLib"
-    
+    case Sale = "SaleLib"
     
     var textLib: String {
         return rawValue.localized

@@ -55,11 +55,13 @@ enum ColorsBackground: String {
     case Aqua = "#00FFFF" /// أزرق فيروزي
     case SunsetOrange = "#FF8288" /// color button sale -1
     case DeepPurple = "#804144" /// color button sale -2
-    
+    case CFF8188 = "#F81888" 
     case StartGradation = "#32C5FF"
     case MiddleGradation = "#B620E0"
     case EndGradation = "#F7B500"
     case Background = "#ECEBE9"
+    case CFFE68F = "#FE68F0"
+    case C6CB0FE = "#6CB0FE"
     
     /// يحول قيمة HEX إلى UIColor.
     /// Converts HEX value to UIColor.
