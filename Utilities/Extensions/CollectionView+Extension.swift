@@ -22,7 +22,7 @@ extension UICollectionView {
     
     /// Registers a UICollectionViewCell using a nib file and sets the delegate and dataSource.
     /// تقوم بتسجيل خلية UICollectionView باستخدام ملف nib وتعيين الـ delegate و dataSource.
- 
+    
     func configureCVCell<Cell: UICollectionViewCell>(
         cell: Cell.Type,
         delegate: UICollectionViewDelegate,
@@ -73,7 +73,7 @@ extension UICollectionView {
     func enableFastScrollByTouch(_ isEnabled: Bool) {
         self.decelerationRate = isEnabled ? .fast : .normal
     }
-
+    
     
     /// تحديث البيانات مع إمكانية إضافة تأثيرات مرئية.
     /// - Parameter completion: كتلة الإغلاق التي يتم تنفيذها بعد انتهاء التحديث.
@@ -84,25 +84,16 @@ extension UICollectionView {
             completion?()
         })
     }
-
+    
     /// إعادة تحميل خلية معينة.
     /// - Parameter indexPath: موقع الخلية المراد إعادة تحميلها.
     func reloadItem(at indexPath: IndexPath) {
         self.reloadItems(at: [indexPath])
     }
-
+    
     
     /// Dequeues a reusable UICollectionViewCell with a specified identifier.
-    /// - Parameters:
-    ///   - cellName: The UICollectionViewCell type to dequeue.
-    ///   - indexPath: The indexPath specifying the location of the cell.
-    /// - Returns: A reusable cell of the specified type.
-    ///
     /// تستدعي خلية قابلة لإعادة الاستخدام باستخدام معرف محدد.
-    /// - المعلمات:
-    ///   - cellName: نوع الخلية المراد استدعاؤها.
-    ///   - indexPath: الموقع المحدد للخلية.
-    /// - الإرجاع: خلية قابلة لإعادة الاستخدام من النوع المحدد.
     func dequeue<T: UICollectionViewCell>(cellType: T.Type, for indexPath: IndexPath) -> T {
         let identifier = String(describing: T.self)
         guard let cell = self.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as? T else {
@@ -125,8 +116,55 @@ extension UICollectionView {
             self.transform = CGAffineTransform(scaleX: -1, y: 1)
         }
     }
+    
+    
+}
 
+extension UICollectionViewCell {
+    /// تأثير الاهتزاز (Shake Animation)
+    
+    func shake() {
+        let animation = CAKeyframeAnimation(keyPath: "transform.translation.x")
+        animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
+        animation.duration = 0.6
+        animation.values = [-20.0, 20.0, -20.0, 20.0, -10.0, 10.0, -5.0, 5.0, 0.0 ]
+        self.layer.add(animation, forKey: "shake")
+    }
+    
+    /// تأثير التكبير (Scale Animation)
+    func scaleAnimation() {
+        UIView.animate(withDuration: 0.2, animations: {
+            self.self.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
+        }) { _ in
+            UIView.animate(withDuration: 0.2) {
+                self.self.transform = CGAffineTransform.identity
+            }
+        }
+    }
+    
+    ///تأثير التلاشي (Fade Animation)
+    func fadeIn(alpha: CGFloat = 0.0 , duration: TimeInterval = 1) {
+        self.alpha = alpha
+        UIView.animate(withDuration: duration) {
+            self.alpha = 1
+        }
+    }
+    ///تأثير الظل (Shadow Effect)
+    func applyShadow(color: UIColor = .lightGray , opacity: Float = 0.5 , shadowRadius: CGFloat = 4) {
+        self.layer.shadowColor = color.cgColor
+        self.layer.shadowOpacity = opacity
+        self.layer.shadowOffset = CGSize(width: 1, height: 1)
+        self.layer.shadowRadius = shadowRadius
+        self.layer.masksToBounds = false
+    }
+    func removeShadowCVCell() {
+        self.layer.shadowColor = nil
+        self.layer.shadowOpacity = 0
+        self.layer.shadowOffset = .zero
+        self.layer.shadowRadius = 0
+    }
 
+    
 }
 
 extension UICollectionViewFlowLayout {
@@ -152,8 +190,8 @@ extension UICollectionViewFlowLayout {
     func setItemSize(_ size: CGSize) {
         self.itemSize = size
     }
-
-
+    
+    
 }
 
 

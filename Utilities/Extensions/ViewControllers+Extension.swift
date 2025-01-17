@@ -157,6 +157,8 @@ extension UIViewController {
                     leftBar.last?.tintColor = .black
                 case .FLITER:
                     rightBar.append(UIBarButtonItem(image: UIImage(named: Images.Filter.names)?.withRenderingMode(.alwaysOriginal), style: UIBarButtonItem.Style.plain, target: self, action: #selector(showFliterButTappes)))
+                case .FAVORITE:
+                    rightBar.append(UIBarButtonItem(image: UIImage(named: Images.FavoriteUnSelected.names)?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(addFavButTappes)))
             }
             
         }
@@ -204,6 +206,11 @@ extension UIViewController {
     @objc func showFliterButTappes(){
         
     }
+    
+    @objc func addFavButTappes(){
+        
+    }
+
     
     //     // Add buttons for Yes and No
     /// button yes

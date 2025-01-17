@@ -96,7 +96,7 @@ class PaymentVC: UIViewController {
         let popupWidth: CGFloat = self.view.bounds.width
         let popupHeight: CGFloat = 420        
         let popupFrame = CGRect(x: 0, y: self.view.bounds.height, width: popupWidth, height: popupHeight)
-        let popup = BagsPouesView(frame: popupFrame)
+        let popup = BagsPopuesView(frame: popupFrame)
         
         // ضبط نوع الـPopup (العناوين أو الشحن)
         popup.popupType = type
@@ -127,7 +127,7 @@ class PaymentVC: UIViewController {
                 dimmedView.alpha = 0.0
                 // لو أردت إنزال الـpopup للأسفل مرة أخرى:
                 // ابحث عن الـBagsPouesView داخله
-                if let popup = dimmedView.subviews.first(where: { $0 is BagsPouesView }) {
+                if let popup = dimmedView.subviews.first(where: { $0 is BagsPopuesView }) {
                     popup.frame.origin.y = self.view.bounds.height
                 }
             }, completion: { _ in
@@ -371,7 +371,7 @@ extension PaymentVC {
 
 // MARK: - BagsPouesViewDelegate
 extension PaymentVC: BagsPouesViewDelegate {
-    func didPressDone(in popup: BagsPouesView) {
+    func didPressDone(in popup: BagsPopuesView) {
         // إغلاق الـPopup
         dismissPopup()
         

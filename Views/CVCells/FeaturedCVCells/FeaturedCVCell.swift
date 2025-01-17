@@ -24,6 +24,10 @@ class FeaturedCVCell: UICollectionViewCell {
         setupUI()
         
     }
+    
+    override func select(_ sender: Any?) {
+        super.select(sender)
+    }
 
 }
 
@@ -52,15 +56,19 @@ extension FeaturedCVCell {
         priceLabel.customLabel(text: cellData.featuredPrice, color: .C161616, size: .size_20, typeFont: .semibold)
 
         // إعداد نص الخصم
-        discountLabel.isHidden = !cellData.isDiscount
-        discountLabel.text = cellData.isDiscount ? "Discount Available" : ""
-        discountLabel.customLabel(text: discountLabel.text ?? "", color: .C161616, size: .size_14)
+        if cellData.isDiscount, let discountAmount = cellData.discountAmount {
+            discountLabel.isHidden = false
+            discountLabel.text = "Discount: \(discountAmount)"
+            discountLabel.customLabel(text: discountLabel.text ?? "", color: .C161616, size: .size_14)
+        } else {
+            discountLabel.isHidden = true
+            discountLabel.text = ""
+        }
 
         // إعداد نص البيع
         saleLabel.isHidden = !cellData.isSalde
         saleLabel.text = cellData.isSalde ? Libs.Sale.textLib : ""
         saleLabel.customLabel(text: saleLabel.text ?? "", color: .CFFFFFF, size: .size_10, font: .cairoMedium)
-        saleView.isHidden =  !cellData.isSalde
-
-     }
+        saleView.isHidden = !cellData.isSalde
+    }
 }

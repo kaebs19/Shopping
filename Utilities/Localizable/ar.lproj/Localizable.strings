@@ -54,6 +54,19 @@
 "ShirtAndBlousesLib"="القمصان والبلوزات";
 "JeansLib"="بناطيل جينز";
 "SaleLib"="الخصم";
+"BlackLib"="أسود";
+"WhiteLib"="أبيض";
+"RedLib"="أحمر";
+"GreyLib"="رمادي";
+"XSmallLib"="صغير جدًا";
+"SmallLib"="صغير";
+"MediumLib"="متوسط";
+"LargeLib"="كبير";
+"XLargeLib"="كبير جدًا";
+"XXLargeLib"="كبير جدًا جدًا";
+"OversizeLib"="واسع جدًا";
+"SizeLib"="المقاسات";
+"ColorLib"="الأوان";
 
 
 // Buts

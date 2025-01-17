@@ -13,4 +13,5 @@ enum NavigationBar {
     case CART
     case BACK
     case FLITER
+    case FAVORITE 
 }

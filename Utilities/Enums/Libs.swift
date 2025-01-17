@@ -53,6 +53,19 @@ enum Libs: String {
     case ShirtAndBlouses  = "ShirtAndBlousesLib"
     case Jeans = "JeansLib"
     case Sale = "SaleLib"
+    case Black = "BlackLib"
+    case White = "WhiteLib"
+    case Red = "RedLib"
+    case Grey = "GreyLib"
+    case XSmall = "XSmallLib"
+    case Small = "SmallLib"
+    case Medium = "MediumLib"
+    case Large = "LargeLib"
+    case XLarge = "XLargeLib"
+    case XXLarge = "XXLargeLib"
+    case Oversize = "OversizeLib"
+    case Size = "SizeLib"
+    case Color = "ColorLib"
     
     var textLib: String {
         return rawValue.localized

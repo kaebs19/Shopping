@@ -27,11 +27,15 @@ enum Colors: String {
     case C6DCEE7 = "#6DCEE7"
     case CCCCED0 = "#CCCED0"
     case CECEBE9 = "#ECEBE9"
-    
+    case Clear = "clear"
 
     
     var uiColor: UIColor? {
-        return UIColor(hex: self.rawValue)
+        if self == .Clear {
+            return .clear
+        }else {
+            return UIColor(hex: self.rawValue)
+        }
     }
 }
 
@@ -60,7 +64,7 @@ enum ColorsBackground: String {
     case MiddleGradation = "#B620E0"
     case EndGradation = "#F7B500"
     case Background = "#ECEBE9"
-    case CFFE68F = "#FE68F0"
+    case CFFE68F = "#FFE68F"
     case C6CB0FE = "#6CB0FE"
     
     /// يحول قيمة HEX إلى UIColor.

@@ -2,7 +2,7 @@ import UIKit
 
 // MARK: - بروتوكول يخبر الـPaymentVC عند الضغط على زرّ DONE
 protocol BagsPouesViewDelegate: AnyObject {
-    func didPressDone(in popup: BagsPouesView)
+    func didPressDone(in popup: BagsPopuesView)
 }
 
 // MARK: - نوع النافذة (عناوين أو طرق شحن)
@@ -11,7 +11,7 @@ enum PopupType {
     case method
 }
 
-class BagsPouesView: UIView {
+class BagsPopuesView: UIView {
     
     // MARK: - UI Elements
     var titleLabel = UILabel()
@@ -39,7 +39,7 @@ class BagsPouesView: UIView {
 }
 
 // MARK: - Public Methods
-extension BagsPouesView {
+extension BagsPopuesView {
     
     /// تهيئة الـBagsPouesView وضبط ما يُعرض (addressTV أو methodTV)
     func setup() {
@@ -155,7 +155,7 @@ extension BagsPouesView {
 }
 
 // MARK: - UITableViewDelegate
-extension BagsPouesView: UITableViewDelegate  {
+extension BagsPopuesView: UITableViewDelegate  {
     
     /// تحديد ارتفاع الصف
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -170,7 +170,7 @@ extension BagsPouesView: UITableViewDelegate  {
 }
 
 // MARK: - UITableViewDataSource
-extension BagsPouesView: UITableViewDataSource  {
+extension BagsPopuesView: UITableViewDataSource  {
     /// عدد الصفوف
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tableView.tag == 0 ? AddressList.count : MethodList.count
@@ -196,7 +196,7 @@ extension BagsPouesView: UITableViewDataSource  {
 }
 
 // MARK: - MethodPopueTVCellsProtocol
-extension BagsPouesView: MethodPopueTVCellsProtocol {
+extension BagsPopuesView: MethodPopueTVCellsProtocol {
     /// استجابة لاختيار (أو ضغط على زرّ) في خلية طرق الشحن
     func selectMethodButtonClicked(index: Int) {
         print("Method index selected: \(index)")
@@ -204,7 +204,7 @@ extension BagsPouesView: MethodPopueTVCellsProtocol {
 }
 
 // MARK: - AAddressPopueTVCellsProtocol
-extension BagsPouesView: AAddressPopueTVCellsProtocol {
+extension BagsPopuesView: AAddressPopueTVCellsProtocol {
     /// استجابة لاختيار (أو ضغط على زرّ) في خلية العناوين
     func selectAddressButtonClicked(index: Int) {
         print("Address index selected: \(index)")

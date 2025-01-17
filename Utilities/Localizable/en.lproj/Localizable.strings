@@ -56,6 +56,19 @@ Fill your cart with great products from Our store .";
 "ShirtAndBlousesLib"="Shirt & Blouses";
 "JeansLib"="Jeans";
 "SaleLib"="Sale";
+ "BlackLib"="Black";
+ "WhiteLib"="White";
+"RedLib"="Red";
+ "GreyLib"="Grey";
+ "XSmallLib"="XSmall";
+"SmallLib"="Small";
+ "MediumLib"="Medium";
+"LargeLib"="Large";
+ "XLargeLib"="XLarge";
+ "XXLargeLib"="XLarge";
+ "OversizeLib"="Oversize";
+"SizeLib"="Size";
+"ColorLib"="Color";
 
 // Buts
 "loginBut"="LOGIN";

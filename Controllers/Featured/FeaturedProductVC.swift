@@ -12,22 +12,31 @@ class FeaturedProductVC: UIViewController {
     // MARK: - Outlets
     @IBOutlet weak var titleProductLabel: UILabel!
     @IBOutlet weak var featuredCV: UICollectionView!
-
+    
     // MARK: - Variables - Arry
     var featuredProductsList: [FeaturedProducts] = [
         FeaturedProducts(featuredName: "Red Overalls", featuredImage: "Product_5", featuredPrice: "$39", isDiscount: false, isSalde: false, backgroundColor: ColorsBackground.CFF8188.rawValue),
-        FeaturedProducts(featuredName: "Pink Fur Coat", featuredImage: "Product_7", featuredPrice: "$80", isDiscount: false, isSalde: true, backgroundColor: ColorsBackground.SunsetOrange.rawValue),
+        FeaturedProducts(featuredName: "Pink Fur Coat", featuredImage: "Product_7", featuredPrice: "$80", isDiscount: false, isSalde: true, backgroundColor: ColorsBackground.SunsetOrange.rawValue , discountAmount: "$59"),
         FeaturedProducts(featuredName: "Red Overalls", featuredImage: "Product_6", featuredPrice: "$83", isDiscount: false, isSalde: false, backgroundColor: ColorsBackground.CFFE68F.rawValue),
-        FeaturedProducts(featuredName: "Red Overalls", featuredImage: "Product_8", featuredPrice: "$51", isDiscount: false, isSalde: true, backgroundColor: ColorsBackground.C6CB0FE.rawValue)
-
+        FeaturedProducts(featuredName: "Red Overalls", featuredImage: "Product_8", featuredPrice: "$51", isDiscount: false, isSalde: true, backgroundColor: ColorsBackground.C6CB0FE.rawValue  , discountAmount: "$69") ,
+        FeaturedProducts(featuredName: "Red Overalls", featuredImage: "Product_8", featuredPrice: "$100", isDiscount: false, isSalde: true, backgroundColor: ColorsBackground.CFFE68F.rawValue  , discountAmount: "$20") ,
+        FeaturedProducts(featuredName: "Red Overalls", featuredImage: "Product_8", featuredPrice: "$80", isDiscount: false, isSalde: true, backgroundColor: ColorsBackground.CFFE68F.rawValue  , discountAmount: "$5")
+        
     ]
+    
+    var selectedIndexPath: IndexPath?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
     }
-
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        hideOrShowTabBar(hide: false)
+    }
+    
+    
 }
 
 extension FeaturedProductVC {
@@ -46,12 +55,21 @@ extension FeaturedProductVC {
     }
 }
 
-// MARK: - UITableViewDelegate
+// MARK: - CollectionViewDelegate
 extension FeaturedProductVC: UICollectionViewDelegate {
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+            
+        switch indexPath.row {
+                case 0:
+                gotToNextVC(identifier: .ProductsVC)
+            default:
+                print(" Didn't select any")
+        }
+        
+    }
 }
 
-// MARK: - UITableViewDataSource
+// MARK: - CollectionViewDataSource
 extension FeaturedProductVC: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -78,7 +96,7 @@ extension FeaturedProductVC: UICollectionViewDelegateFlowLayout {
         - totaHorizontalSpacing
         
         let cellWidth = availableWidth / numberOfCell
-        let cellHeight: CGFloat = 256
+        let cellHeight: CGFloat = 270
         return CGSize(width: cellWidth, height: cellHeight)
     }
     
@@ -89,4 +107,5 @@ extension FeaturedProductVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 38
     }
+    
 }

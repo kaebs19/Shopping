@@ -16,4 +16,5 @@ import Foundation
         var isDiscount: Bool
         var isSalde: Bool
         var backgroundColor: String
+        var discountAmount: String?
     }

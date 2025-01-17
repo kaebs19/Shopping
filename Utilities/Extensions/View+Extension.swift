@@ -13,6 +13,14 @@ import UIKit
 
 extension UIView {
     
+
+    /// تعطيل تحويل أقنعة التغيير التلقائي للحجم لعدة عناصر.  Disables autoresizing mask translation for multiple views.
+    static func disableAutoresizingMask(for views: UIView...) {
+        for view in views {
+            view.translatesAutoresizingMaskIntoConstraints = false
+        }
+    }
+
     // MARK: - زاوية (Corner Radius) وحدود (Border)
     
     func addRadius(radius: CGFloat) {
