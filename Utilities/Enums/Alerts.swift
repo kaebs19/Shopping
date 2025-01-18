@@ -23,6 +23,11 @@ enum Alerts: String , CaseIterable {
     case warningMessage = "WarningMessageAlert"
     case yes = "YesAlert"
     case no = "NoAlert"
+    case cancel = "CancelAlert"
+    case AddedFavoritesList = "AddedToYourFavoritesListAlert"
+    case RemovedFavoritesList = "RemovedFromYourFavoritesListAlert"
+    case FavoritesUpdateTitle = "FavoritesUpdateTitleAlert"
+
     
     var texts: String {
         return rawValue.localized

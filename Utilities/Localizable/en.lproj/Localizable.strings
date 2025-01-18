@@ -69,6 +69,8 @@ Fill your cart with great products from Our store .";
  "OversizeLib"="Oversize";
 "SizeLib"="Size";
 "ColorLib"="Color";
+"EstimatedDeliveryLib"="Estimated Delivery";
+"AddToBagLib"="Add To Bag";
 
 // Buts
 "loginBut"="LOGIN";
@@ -107,6 +109,10 @@ Fill your cart with great products from Our store .";
 "WarningMessageAlert"="Are you sure you want to log out?";
 "YesAlert"="Yes";
 "NoAlert"="No";
+"CancelAlert"="Cancel";
+"AddedToYourFavoritesListAlert"="The product has been added to your favorites list.";
+"RemovedFromYourFavoritesListAlert"="The product has been removed from your favorites list.";
+"FavoritesUpdateTitleAlert"="Favorites Update";
 
 // Titls
 "HomeTitle"="Home";

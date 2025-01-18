@@ -8,7 +8,7 @@
 import UIKit
 
 protocol SizeAndColorPupuesViewProtocol: NSObjectProtocol {
-    func didPressDone(in popup: SizeAndColorPupuesView)
+    func didPressDone(in popup: SizeAndColorPupuesView , selectedSize: String? , selectedColor: String?)
 }
 
 enum SelectedSizeAndColor {
@@ -147,7 +147,9 @@ extension SizeAndColorPupuesView {
     }
     
     @objc func doneButtonTapped() {
-        delegate?.didPressDone(in: self)
+        let selectedSize = sizesList.first(where: { $0.isSelected })?.name
+        let selectedColor = colorList.first(where: { $0.isSelected })?.name
+        delegate?.didPressDone(in: self ,selectedSize: selectedSize , selectedColor: selectedColor)
         removeFromSuperview()
     }
     
@@ -158,6 +160,7 @@ extension SizeAndColorPupuesView {
 extension SizeAndColorPupuesView: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         if tableView.tag == 0 {
             for i in 0..<sizesList.count {
                 sizesList[i].isSelected = (i == indexPath.row)
@@ -169,6 +172,7 @@ extension SizeAndColorPupuesView: UITableViewDelegate {
             }
             colorTV.reloadData()
         }
+
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {        

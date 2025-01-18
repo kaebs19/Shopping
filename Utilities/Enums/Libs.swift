@@ -66,6 +66,8 @@ enum Libs: String {
     case Oversize = "OversizeLib"
     case Size = "SizeLib"
     case Color = "ColorLib"
+    case EstimatedDelivery = "EstimatedDeliveryLib"
+    case addToBag = "AddToBagLib"
     
     var textLib: String {
         return rawValue.localized
