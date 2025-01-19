@@ -40,6 +40,7 @@
         <string>Poppins-SemiBold.ttf</string>
     </array>
 
-    
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>نحتاج إلى الوصول إلى مكتبة الصور لتحديث صورتك.</string>
 </dict>
 </plist>

@@ -15,4 +15,5 @@ enum Titles: String, CaseIterable {
     case Account = "AccountTitle"
     case ShoppingBag = "ShoppingBagTitle"
     case Payment = "PaymentTitle"
+    case Wishlist = "WishlistTitle"
 }

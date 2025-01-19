@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ObjectiveC
 
 class ProductsVC: UIViewController {
     
@@ -87,6 +88,7 @@ extension ProductsVC {
         hideOrShowTabBar()
         customNavigationBar(items: [.BACK , .FAVORITE], title: .none)
         mainView.addRadius(radius: 20)
+        mainView.addAnimateBounceView(duration: 0.2)
         // عرض تقييم افتراضي
         updateRatingStar(for: 4.1)
         setupStarGesture()

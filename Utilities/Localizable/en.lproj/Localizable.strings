@@ -113,6 +113,11 @@ Fill your cart with great products from Our store .";
 "AddedToYourFavoritesListAlert"="The product has been added to your favorites list.";
 "RemovedFromYourFavoritesListAlert"="The product has been removed from your favorites list.";
 "FavoritesUpdateTitleAlert"="Favorites Update";
+"ChooseImageAlert"="Choose Image";
+ "DetailsChooseImageAlert"="";
+"CameraAlert"="Camera";
+"PhotoLabaryAlert"="Photo Labary";
+
 
 // Titls
 "HomeTitle"="Home";
@@ -121,3 +126,4 @@ Fill your cart with great products from Our store .";
 "AccountTitle"="Account";
 "ShoppingBagTitle"="ShoppingBag";
 "PaymentTitle"="Payment";
+"WishlistTitle"="Wish List";

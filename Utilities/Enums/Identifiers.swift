@@ -23,5 +23,6 @@ enum Identifiers: String {
     case CategoriesVC = "CategoriesVC"
     case CategoriesDetalsVC = "CategoriesDetalsVC"
     case ProductsVC = "ProductsVC"
+    case WishListVC = "WishListVC"
     
 }

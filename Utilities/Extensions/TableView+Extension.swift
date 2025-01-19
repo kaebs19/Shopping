@@ -73,6 +73,30 @@ extension UITableView {
             }, completion: nil)
         }
     }
+    
+    /// Sequential Animation: Cells appear one after another -الرسوم المتحركة المتسلسلة: تظهر الخلايا واحدة تلو الأخرى
+    func animateSequentially(duration: TimeInterval = 0.5, delay: TimeInterval = 0.05) {
+        let cells = self.visibleCells
+        for (index, cell) in cells.enumerated() {
+            cell.transform = CGAffineTransform(translationX: 0, y: self.bounds.height) // Start from bottom
+            UIView.animate(withDuration: duration, delay: delay * Double(index), options: [.curveEaseInOut], animations: {
+                cell.transform = CGAffineTransform.identity // Return to original position
+            }, completion: nil)
+        }
+    }
+    
+    /// Staggered Animation: Cells appear with a delay between each cell - الرسوم المتحركة المتدرجة: تظهر الخلايا مع وجود تأخير بين كل خلية
+    func animateStaggered(duration: TimeInterval = 0.5, delay: TimeInterval = 0.1) {
+        let cells = self.visibleCells
+        for (index, cell) in cells.enumerated() {
+            cell.alpha = 0 // Start with invisible cells
+            UIView.animate(withDuration: duration, delay: delay * Double(index), options: [.curveEaseInOut], animations: {
+                cell.alpha = 1 // Fade in
+            }, completion: nil)
+        }
+    }
+    
+    
     /// عرض واجهة فارغة عند عدم وجود بيانات.
     /// Displays an empty state view when no data is available.
     func showEmptyState(message: String) {
@@ -81,8 +105,25 @@ extension UITableView {
         messageLabel.text = message
         messageLabel.textAlignment = .center
         messageLabel.textColor = .gray
+        messageLabel.numberOfLines = 0
+        messageLabel.translatesAutoresizingMaskIntoConstraints = false
         emptyView.addSubview(messageLabel)
+        
+        // إضافة constraints لتوسيط النص
+        NSLayoutConstraint.activate([
+            messageLabel.centerXAnchor.constraint(equalTo: emptyView.centerXAnchor),
+            messageLabel.centerYAnchor.constraint(equalTo: emptyView.centerYAnchor),
+            messageLabel.leadingAnchor.constraint(equalTo: emptyView.leadingAnchor, constant: 20),
+            messageLabel.trailingAnchor.constraint(equalTo: emptyView.trailingAnchor, constant: -20)
+        ])
+        
         self.backgroundView = emptyView
+        self.separatorStyle = .none
+    }
+    
+    func restore() {
+        self.backgroundView = nil
+        self.separatorStyle = .singleLine
     }
 }
 

@@ -27,7 +27,11 @@ enum Alerts: String , CaseIterable {
     case AddedFavoritesList = "AddedToYourFavoritesListAlert"
     case RemovedFavoritesList = "RemovedFromYourFavoritesListAlert"
     case FavoritesUpdateTitle = "FavoritesUpdateTitleAlert"
-
+    case ChooseImage = "ChooseImageAlert"
+    case DetailsChooseImage = "DetailsChooseImageAlert"
+    case Camera      = "CameraAlert"
+    case PhotoLabary    = "PhotoLabaryAlert"
+    
     
     var texts: String {
         return rawValue.localized

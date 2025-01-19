@@ -30,6 +30,7 @@ enum Images: String, CaseIterable {
     case Fill_Star =  "rate_star_select"
     case Empty_Star = "rate_star_unselected"
     case Half_Star = "Half_Start"
+    case Logout = "log-out"
     
     case Address_menu = "address"
     case Help_circle_menu = "help-circle"

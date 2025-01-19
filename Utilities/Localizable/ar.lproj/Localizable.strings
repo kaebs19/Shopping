@@ -114,6 +114,9 @@
 "AddedToYourFavoritesListAlert"="لقد تمت إضافة المنتج إلى قائمة المفضلة لديك. ";
 "RemovedFromYourFavoritesListAlert"="تمت إزالة المنتج من قائمة المفضلة لديك.";
 "FavoritesUpdateTitleAlert"="تحديث المفضلة";
+"ChooseImageAlert" = "اختر صورة";
+"CameraAlert" = "الكاميرا";
+"PhotoLabaryAlert" = "مكتبة الصور";
 
 // Titles
 "HomeTitle"="الرئيسية";
@@ -132,3 +135,4 @@
 "ContactUsTitle"="تواصل معنا";
 "ChangePasswordTitle"="تغيير كلمة المرور";
 "ShoppingBagTitle"="عربة التسوق";
+"WishlistTitle"="قائمة رغباتي";
