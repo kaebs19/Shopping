@@ -33,8 +33,19 @@ extension UITextField {
         self.isSecureTextEntry.toggle()
     }
     
-    /// Converts the current text in the text field to uppercase
+    /// Converts the current text in the text field to uppercase  تحويل النص الحالي في حقل النص إلى أحرف كبيرة
+
     func convertTextToUppercase() {
         self.text = self.text?.uppercased()
     }
+    
+    /// Checks if the text field is empty or contains only whitespace.    يتحقق مما إذا كان حقل النص فارغًا أو يحتوي على مسافات بيضاء فقط.
+    func isEnpty() -> Bool {
+        return self.text?.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty ?? true
+    }
+    
+    func hasExactCharacterCount(_ count: Int) -> Bool {
+        return self.text?.count == count
+    }
+    
 }

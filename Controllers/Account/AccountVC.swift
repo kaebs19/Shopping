@@ -107,13 +107,26 @@ extension AccountVC: UITableViewDelegate  {
         
         switch indexPath.row {
             case 0:
-                gotToNextVC(identifier: .CartVC)
+                gotToNextVC(identifier: .BagVc)
                 
             case 1:
                 gotToNextVC(identifier: .WishListVC)
                 
+            case 2:
+                print(" TODO later \(indexPath.row)")
+            case 3:
+                gotToNextVC(identifier: .MyAddressVC)
+            case 4:
+                print(" TODO later \(indexPath.row)")
+            case 5:
+                print(" TODO later \(indexPath.row)")
+            case 6:
+                print(" TODO later \(indexPath.row)")
+            case 7:
+                print(" TODO later \(indexPath.row)")
             default:
-                print(" TODO later")
+                print(" TODO later \(indexPath.row)")
+
         }
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

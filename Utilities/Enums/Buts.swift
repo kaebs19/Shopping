@@ -24,6 +24,9 @@ enum Buts: String {
     /// Button for payment
     case payment = "paymentBut"
     case Done = "DoneBut"
+    case AddNewAddress = "AddNewAddressBut"
+    case SaveAddress = "SaveAddressBut"
+    case EditAddress = "EditAddressBut"
     
     /// Returns the localized text for the button
     var textBut: String {

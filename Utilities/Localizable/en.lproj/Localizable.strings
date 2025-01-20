@@ -71,6 +71,14 @@ Fill your cart with great products from Our store .";
 "ColorLib"="Color";
 "EstimatedDeliveryLib"="Estimated Delivery";
 "AddToBagLib"="Add To Bag";
+"MyAddressLib"="My Address";
+"AddressNameLib"="Address Name";
+"CityLib"="City";
+"ZipCodeLib"="Zip Code";
+"DistrictLib"="District";
+"StreetLib"="Street";
+"AddAddressLib"="Add New Address";
+
 
 // Buts
 "loginBut"="LOGIN";
@@ -81,6 +89,9 @@ Fill your cart with great products from Our store .";
 "shopNowBut"="SHOP NEW";
 "paymentBut"="PAYMENY";
 "DoneBut"="Done";
+"AddNewAddressBut"="Add New Address";
+"SaveAddressBut" = "Save Address";
+"EditAddressBut"="Edit Address";
 
 // TextFileds
 "EmailTF"="E-mail";
@@ -92,6 +103,12 @@ Fill your cart with great products from Our store .";
 "CardNumberTF"="Card Number";
 "CVCTF"="CVC";
 "ExpirationDateTF"="Expiration Date";
+"ZipCodeTF"="Zip Code";
+"AddressNameTF"="Address Name";
+"CityTF"="CityTF";
+"DistrictTF"="District";
+"StreetTF"="Street";
+
 
 // Alerts
 "ErrorAlert"="Error";

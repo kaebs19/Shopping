@@ -31,7 +31,7 @@ enum Alerts: String , CaseIterable {
     case DetailsChooseImage = "DetailsChooseImageAlert"
     case Camera      = "CameraAlert"
     case PhotoLabary    = "PhotoLabaryAlert"
-    
+
     
     var texts: String {
         return rawValue.localized

@@ -69,6 +69,15 @@
 "ColorLib"="الألوان";
 "EstimatedDeliveryLib"="تاريخ التسليم المتوقع";
 "AddToBagLib"="أضف إلى السلة";
+"MyAddressLib"="العناوين";
+"AddressNameLib" = "اسم العنوان";
+"CityLib" = "المدينة";
+"ZipCodeLib" = "الرمز البريدي";
+"DistrictLib" = "الحي/المنطقة";
+"StreetLib" = "الشارع";
+"AddAddressLib" = "إضافة عنوان جديد";
+
+
 
 
 // Buts
@@ -80,6 +89,7 @@
 "shopNowBut"="تسوق الآن";
 "paymentBut"="المدفوعات";
 "DoneBut"="تحديد";
+"AddNewAddressBut"="أضافة عنوان جديد";
 
 
 // TextFileds
@@ -92,6 +102,11 @@
 "CardNumberTF"="رقم البطاقة";
 "CVCTF"="رقم التحقق";
 "ExpirationDateTF"="تاريخ انتهاء";
+"ZipCodeTF" = "الرمز البريدي";
+"AddressNameTF" = "اسم العنوان";
+"CityTF" = "المدينة";
+"DistrictTF" = "الحي/المنطقة";
+"StreetTF" = "الشارع";
 
 
 // Alerts

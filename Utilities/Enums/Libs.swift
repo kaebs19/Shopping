@@ -68,6 +68,14 @@ enum Libs: String {
     case Color = "ColorLib"
     case EstimatedDelivery = "EstimatedDeliveryLib"
     case addToBag = "AddToBagLib"
+    case myAddress = "MyAddressLib"
+    case AddressName = "AddressNameLib"
+    case City = "CityLib"
+    case ZipCode = "ZipCodeLib"
+    case District = "DistrictLib"
+    case street = "StreetLib"
+    case AddAddress = "AddAddressLib"
+
     
     var textLib: String {
         return rawValue.localized
