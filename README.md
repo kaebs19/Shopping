@@ -1,6 +1,5 @@
-
 # Welcome مرحبا بك
-## في مشروع تصميم متجر الملابس!  
+## في مشروع تصميم متجر الملابس!
 
 يهدف هذا المشروع إلى توفير تطبيق سلس وبسيط لإدارة متجر ملابس يعرض المنتجات بشكل جذاب ويسهّل على المستخدمين استكشاف القطع المختلفة وإضافتها إلى سلة التسوق. تم تصميم واجهات المستخدم بعناية لتكون قابلة للتطوير والتخصيص وفقًا لاحتياجات كل متجر، مع دعم اللغتين العربية والإنجليزية لراحة المستخدمين على اختلاف متطلباتهم.
 
@@ -26,29 +25,74 @@ The goal of this project is to provide a smooth and straightforward application 
 
 ## Screenshots / لقطات الشاشة
 
-> **ملاحظة**: قد لا تعمل روابط الـ blob أدناه على GitHub مباشرة. إن لم تظهر الصور، قم برفعها داخل المستودع أو استخدم خدمة رفع صور تدعم روابط مباشرة (Direct Links).
 
-1. ![Screenshot 1](blob:https://imgur.com/bcfb9e4c-413f-4529-a8fd-a41f62593a2c)
-2. ![Screenshot 2](blob:https://imgur.com/3decc193-7ac2-4c7e-be01-90c5357ed340)
-3. ![Screenshot 3](blob:https://imgur.com/9709c4d7-654d-440e-9894-7b790684d0c7)
-4. ![Screenshot 4](blob:https://imgur.com/92ba4adb-212a-489d-b4de-6ac9d085e5ea)
-5. ![Screenshot 5](blob:https://imgur.com/bb537040-0d5b-4071-bbb1-1ef10b9147ec)
-6. ![Screenshot 6](blob:https://imgur.com/029f5cfb-8bab-4288-9583-d45a513f593a)
-7. ![Screenshot 7](blob:https://imgur.com/0ae45f07-3494-4eba-95cc-a52b585ac9fe)
-8. ![Screenshot 8](blob:https://imgur.com/9b180f67-e7f9-47fb-8911-aa411902e513)
-9. ![Screenshot 9](blob:https://imgur.com/b01aa184-6ae9-4ccd-a5cb-b0341a15ed76)
-10. ![Screenshot 10](blob:https://imgur.com/9554f3b1-8470-4efa-abc3-549d0f859196)
-11. ![Screenshot 11](blob:https://imgur.com/9c529147-ebd1-4b66-b8f7-96b220e71131)
-12. ![Screenshot 12](blob:https://imgur.com/cb28c2f5-aa59-4228-9266-f4e30d58c9d0)
-13. ![Screenshot 13](blob:https://imgur.com/7922bfb6-b38c-47a0-9e96-d44d554216b2)
-14. ![Screenshot 14](blob:https://imgur.com/d3df1e72-4a04-49fd-9e36-c3aabb7fcc64)
-15. ![Screenshot 15](blob:https://imgur.com/3b1fc22f-ff18-4673-a4ad-2a90e68d58d2)
-16. ![Screenshot 16](blob:https://imgur.com/6144475a-1494-4d33-b2db-d9133925a89a)
-17. ![Screenshot 17](blob:https://imgur.com/31e3f2bc-f595-48fb-abb0-61be0253d946)
-18. ![Screenshot 18](blob:https://imgur.com/333de4ee-7579-4862-9d25-8c9bf70432c5)
-19. ![Screenshot 19](blob:https://imgur.com/06f914e0-c0b0-436d-8c89-46f76ae04e1b)
-20. ![Screenshot 20](blob:https://imgur.com/8b3a644c-913b-4410-a3d1-38c4c012bd8a)
-21. ![Screenshot 21](blob:https://imgur.com/ddfed3eb-a401-4722-b4e8-8d7dd38cb86e)
-22. ![Screenshot 22](blob:https://imgur.com/d8d684b8-6165-431c-9fb0-e53deb1ccd92)
+**Screenshot 1**  
+[![Screenshot-2025-01-21-at-8-31-51-PM.png](https://i.postimg.cc/pT27f9pT/Screenshot-2025-01-21-at-8-31-51-PM.png)](https://postimg.cc/Z9MVZ5Pt)
+
+**Screenshot 2**  
+[![Screenshot-2025-01-21-at-8-33-05-PM.png](https://i.postimg.cc/B6MzMqKC/Screenshot-2025-01-21-at-8-33-05-PM.png)](https://postimg.cc/vgxXmwX1)
+
+**Screenshot 3**  
+[![Screenshot-2025-01-21-at-8-33-11-PM.png](https://i.postimg.cc/BbbVzd5f/Screenshot-2025-01-21-at-8-33-11-PM.png)](https://postimg.cc/WqR8FYf5)
+
+**Screenshot 4 (Duplicate of Screenshot 3)**  
+[![Screenshot-2025-01-21-at-8-33-11-PM.png](https://i.postimg.cc/BbbVzd5f/Screenshot-2025-01-21-at-8-33-11-PM.png)](https://postimg.cc/WqR8FYf5)
+
+**Screenshot 5**  
+[![Screenshot-2025-01-21-at-8-37-28-PM.png](https://i.postimg.cc/HWvKMkHY/Screenshot-2025-01-21-at-8-37-28-PM.png)](https://postimg.cc/CdDmTYzX)
+
+**Screenshot 6**  
+[![Screenshot-2025-01-21-at-8-37-37-PM.png](https://i.postimg.cc/CLZ2spLj/Screenshot-2025-01-21-at-8-37-37-PM.png)](https://postimg.cc/vcsXGjnB)
+
+**Screenshot 7**  
+[![Screenshot-2025-01-21-at-8-37-41-PM.png](https://i.postimg.cc/WbQH9Yhx/Screenshot-2025-01-21-at-8-37-41-PM.png)](https://postimg.cc/nCG2rkK1)
+
+**Screenshot 8**  
+[![Screenshot-2025-01-21-at-8-37-49-PM.png](https://i.postimg.cc/GmGS6PDt/Screenshot-2025-01-21-at-8-37-49-PM.png)](https://postimg.cc/tsR5xx2G)
+
+**Screenshot 9**  
+[![Screenshot-2025-01-21-at-8-38-02-PM.png](https://i.postimg.cc/yNKrKJhP/Screenshot-2025-01-21-at-8-38-02-PM.png)](https://postimg.cc/SnZG7xv2)
+
+**Screenshot 10**  
+[![Screenshot-2025-01-21-at-8-38-11-PM.png](https://i.postimg.cc/5tmK2xnM/Screenshot-2025-01-21-at-8-38-11-PM.png)](https://postimg.cc/DW8PC39C)
+
+**Screenshot 11**  
+[![Screenshot-2025-01-21-at-8-38-40-PM.png](https://i.postimg.cc/ydYQJwb3/Screenshot-2025-01-21-at-8-38-40-PM.png)](https://postimg.cc/1g2c2YPy)
+
+**Screenshot 12**  
+[![Screenshot-2025-01-21-at-8-39-31-PM.png](https://i.postimg.cc/hvX2sVgS/Screenshot-2025-01-21-at-8-39-31-PM.png)](https://postimg.cc/V0c9LrdT)
+
+**Screenshot 13**  
+[![Screenshot-2025-01-21-at-8-39-34-PM.png](https://i.postimg.cc/Hs7S70Bz/Screenshot-2025-01-21-at-8-39-34-PM.png)](https://postimg.cc/Vdm9xty0)
+
+**Screenshot 14**  
+[![Screenshot-2025-01-21-at-8-39-37-PM.png](https://i.postimg.cc/kBsNq591/Screenshot-2025-01-21-at-8-39-37-PM.png)](https://postimg.cc/kBsNq591)
+
+**Screenshot 15**  
+[![Screenshot-2025-01-21-at-8-40-10-PM.png](https://i.postimg.cc/Lsmv7cRQ/Screenshot-2025-01-21-at-8-40-10-PM.png)](https://postimg.cc/rDYSRYD5)
+
+**Screenshot 16**  
+[![Screenshot-2025-01-21-at-8-40-16-PM.png](https://i.postimg.cc/JshNnWz1/Screenshot-2025-01-21-at-8-40-16-PM.png)](https://postimg.cc/JshNnWz1)
+
+**Screenshot 17**  
+[![Screenshot-2025-01-21-at-8-40-24-PM.png](https://i.postimg.cc/6QzzNMpW/Screenshot-2025-01-21-at-8-40-24-PM.png)](https://postimg.cc/06M7YdSF)
+
+**Screenshot 18**  
+[![Screenshot-2025-01-21-at-8-40-27-PM.png](https://i.postimg.cc/C117MbRj/Screenshot-2025-01-21-at-8-40-27-PM.png)](https://postimg.cc/Z9GpVBFR)
+
+**Screenshot 19 (Duplicate of Screenshot 18)**  
+[![Screenshot-2025-01-21-at-8-40-27-PM.png](https://i.postimg.cc/Z9GpVBFR/Screenshot-2025-01-21-at-8-40-27-PM.png)](https://postimg.cc/Z9GpVBFR)
+
+**Screenshot 20**  
+[![Screenshot-2025-01-21-at-8-40-32-PM.png](https://i.postimg.cc/Ssvrnj9H/Screenshot-2025-01-21-at-8-40-32-PM.png)](https://postimg.cc/BL2DySMC)
+
+**Screenshot 21**  
+[![Screenshot-2025-01-21-at-8-40-39-PM.png](https://i.postimg.cc/zvHkK5Sv/Screenshot-2025-01-21-at-8-40-39-PM.png)](https://postimg.cc/JHmJCfFC)
+
+**Screenshot 22**  
+[![Screenshot-2025-01-21-at-8-40-51-PM.png](https://i.postimg.cc/7bvnNcmV/Screenshot-2025-01-21-at-8-40-51-PM.png)](https://postimg.cc/SYr9SZ02)
+
+**Screenshot 23**  
+[![Screenshot-2025-01-21-at-8-41-01-PM.png](https://i.postimg.cc/G3B0qyX8/Screenshot-2025-01-21-at-8-41-01-PM.png)](https://postimg.cc/QVrnMHGh)
 
 ---
