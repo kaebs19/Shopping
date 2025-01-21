@@ -82,6 +82,9 @@ Fill your cart with great products from Our store .";
 "NotificationLib"="Notification";
 "OFFLib"="OFF";
 "ONLib"="ON";
+"FAQLib"="FAQ";
+"QuestionLib"="Question";
+"AnswerLib"="Answer";
 
 // Buts
 "loginBut"="LOGIN";

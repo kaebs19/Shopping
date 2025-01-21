@@ -65,7 +65,7 @@ extension LanguageVC: UITableViewDelegate {
         
         languageList[indexPath.row].isSelected = true
         DispatchQueue.main.async {
-            self.languageTV.reloadData()
+            self.languageTV
         }
     }
     

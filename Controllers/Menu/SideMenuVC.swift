@@ -88,13 +88,18 @@ extension SideMenuVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
             case 0: gotToNextVC(identifier: .BagVc)
-                print("Done \(indexPath.row)")
-            case 1: print("Done \(indexPath.row)")
-            case 2: print("Done \(indexPath.row)")
-            case 3:print("Done \(indexPath.row)")
-            case 4: print("Done \(indexPath.row)")
-            case 5:  print("Done \(indexPath.row)")
-            default:  print("Done \(indexPath.row)")
+            case 1:
+                gotToNextVC(identifier: .WishListVC)
+            case 2:
+                print(" TODO later Last Viewed  \(indexPath.row)")
+            case 3:
+                gotToNextVC(identifier: .MyAddressVC)
+            case 4:
+                gotToNextVC(identifier: .LanguageVC)
+            case 5:
+                gotToNextVC(identifier: .SettingsVC)
+            default:
+                gotToNextVC(identifier: .FAQVC)
         }
     }
     

@@ -120,10 +120,8 @@ extension AccountVC: UITableViewDelegate  {
                 gotToNextVC(identifier: .SettingsVC)
 
             case 6:
-                print(" TODO later help \(indexPath.row)")
-
+                gotToNextVC(identifier: .FAQVC)
             case 7:
-                print(" TODO later help \(indexPath.row)")
                 // إنشاء الإجراء عند اختيار "نعم" (تسجيل الخروج)
                 let yesAction = UIAlertAction(title: Alerts.yes.texts, style: .default) { _ in
                     // تنفيذ عملية تسجيل الخروج هنا

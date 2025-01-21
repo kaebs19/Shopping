@@ -1576,6 +1576,46 @@
             </objects>
             <point key="canvasLocation" x="5443.5114503816794" y="769.71830985915494"/>
         </scene>
+        <!--FAQVC-->
+        <scene sceneID="JtC-GQ-dQs">
+            <objects>
+                <viewController storyboardIdentifier="FAQVC" id="ms4-9K-K7r" customClass="FAQVC" customModule="Shopping" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kid-E1-l2l">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kpv-Jn-a3j">
+                                <rect key="frame" x="24" y="79" width="345" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="sx4-D5-Shd">
+                                <rect key="frame" x="24" y="128" width="345" height="662"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="o5G-PB-7qa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="o5G-PB-7qa" firstAttribute="trailing" secondItem="sx4-D5-Shd" secondAttribute="trailing" constant="24" id="CtR-gN-4NX"/>
+                            <constraint firstItem="Kpv-Jn-a3j" firstAttribute="top" secondItem="o5G-PB-7qa" secondAttribute="top" constant="20" id="X3k-jh-e31"/>
+                            <constraint firstItem="sx4-D5-Shd" firstAttribute="top" secondItem="Kpv-Jn-a3j" secondAttribute="bottom" constant="28" id="YIE-II-mKO"/>
+                            <constraint firstItem="Kpv-Jn-a3j" firstAttribute="leading" secondItem="o5G-PB-7qa" secondAttribute="leading" constant="24" id="dJO-CG-6Vr"/>
+                            <constraint firstItem="o5G-PB-7qa" firstAttribute="trailing" secondItem="Kpv-Jn-a3j" secondAttribute="trailing" constant="24" id="pAZ-Xe-GGm"/>
+                            <constraint firstItem="o5G-PB-7qa" firstAttribute="bottom" secondItem="sx4-D5-Shd" secondAttribute="bottom" constant="28" id="t86-lQ-zh3"/>
+                            <constraint firstItem="sx4-D5-Shd" firstAttribute="leading" secondItem="o5G-PB-7qa" secondAttribute="leading" constant="24" id="xxo-sR-I5i"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="faqTV" destination="sx4-D5-Shd" id="iJ2-9V-BKv"/>
+                        <outlet property="titleLabel" destination="Kpv-Jn-a3j" id="edG-4o-bMG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Ct-6q-Tpx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6121" y="770"/>
+        </scene>
         <!--Tab Bars-->
         <scene sceneID="ZOC-Uh-mi0">
             <objects>

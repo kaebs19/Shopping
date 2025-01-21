@@ -28,4 +28,5 @@ enum Identifiers: String {
     case AddNewAddressVC = "AddNewAddressVC"
     case LanguageVC = "LanguageVC"
     case SettingsVC = "SettingsVC"
+    case FAQVC = "FAQVC"
 }

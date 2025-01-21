@@ -79,6 +79,9 @@ enum Libs: String {
     case Notification = "NotificationLib"
     case OFF = "OFFLib"
     case ON = "ONLib"
+    case FAQ = "FAQLib"
+    case Question = "QuestionLib"
+    case Answer = "AnswerLib"
     
     var textLib: String {
         return rawValue.localized

@@ -78,9 +78,11 @@
 "AddAddressLib" = "إضافة عنوان جديد";
 "ChangeLanguageLib"="تغير اللغة";
 "NotificationLib"="الأشعارات";
-"OFFLib"="ريقاف الاشعارات";
+"OFFLib"="إيقاف الاشعارات";
 "ONLib"="تشغيل الاشعارات";
-
+"FAQLib"="التعليمات";
+"QuestionLib"="السؤال ";
+"AnswerLib"="الأجابة ";
 
 
 // Buts
