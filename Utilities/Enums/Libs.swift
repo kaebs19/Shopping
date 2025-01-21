@@ -75,7 +75,10 @@ enum Libs: String {
     case District = "DistrictLib"
     case street = "StreetLib"
     case AddAddress = "AddAddressLib"
-
+    case ChangeLanguage = "ChangeLanguageLib"
+    case Notification = "NotificationLib"
+    case OFF = "OFFLib"
+    case ON = "ONLib"
     
     var textLib: String {
         return rawValue.localized

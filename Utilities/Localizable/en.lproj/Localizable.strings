@@ -78,7 +78,10 @@ Fill your cart with great products from Our store .";
 "DistrictLib"="District";
 "StreetLib"="Street";
 "AddAddressLib"="Add New Address";
-
+"ChangeLanguageLib"="Change Language";
+"NotificationLib"="Notification";
+"OFFLib"="OFF";
+"ONLib"="ON";
 
 // Buts
 "loginBut"="LOGIN";

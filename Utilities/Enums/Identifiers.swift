@@ -26,4 +26,6 @@ enum Identifiers: String {
     case WishListVC = "WishListVC"
     case MyAddressVC = "MyAddressVC"
     case AddNewAddressVC = "AddNewAddressVC"
+    case LanguageVC = "LanguageVC"
+    case SettingsVC = "SettingsVC"
 }

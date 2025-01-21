@@ -76,7 +76,10 @@
 "DistrictLib" = "الحي/المنطقة";
 "StreetLib" = "الشارع";
 "AddAddressLib" = "إضافة عنوان جديد";
-
+"ChangeLanguageLib"="تغير اللغة";
+"NotificationLib"="الأشعارات";
+"OFFLib"="ريقاف الاشعارات";
+"ONLib"="تشغيل الاشعارات";
 
 
 

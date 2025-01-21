@@ -108,24 +108,40 @@ extension AccountVC: UITableViewDelegate  {
         switch indexPath.row {
             case 0:
                 gotToNextVC(identifier: .BagVc)
-                
             case 1:
                 gotToNextVC(identifier: .WishListVC)
-                
             case 2:
-                print(" TODO later \(indexPath.row)")
+                print(" TODO later Last Viewed  \(indexPath.row)")
             case 3:
                 gotToNextVC(identifier: .MyAddressVC)
             case 4:
-                print(" TODO later \(indexPath.row)")
+                gotToNextVC(identifier: .LanguageVC)
             case 5:
-                print(" TODO later \(indexPath.row)")
+                gotToNextVC(identifier: .SettingsVC)
+
             case 6:
-                print(" TODO later \(indexPath.row)")
+                print(" TODO later help \(indexPath.row)")
+
             case 7:
-                print(" TODO later \(indexPath.row)")
+                print(" TODO later help \(indexPath.row)")
+                // إنشاء الإجراء عند اختيار "نعم" (تسجيل الخروج)
+                let yesAction = UIAlertAction(title: Alerts.yes.texts, style: .default) { _ in
+                    // تنفيذ عملية تسجيل الخروج هنا
+                    print("تم إلغاء تسجيل الخروج.")
+                    UserDefault.shared.logout()
+                    self.gotToNextVC(storyboard: .Main, identifier: .LoginVC)
+                }
+                
+                // إنشاء الإجراء عند اختيار "لا" (إلغاء)
+                let noAction = UIAlertAction(title: Alerts.no.texts, style: .cancel) { _ in
+                    print("تم إلغاء تسجيل الخروج.")
+                }
+                let alert = UIAlertController()
+                alert.showConfirmationMessage(title: Alerts.warning.texts, message: Alerts.warningMessage.texts, theme: .warning, actions: [yesAction , noAction])
+
             default:
-                print(" TODO later \(indexPath.row)")
+                print(" TODO later  \(indexPath.row)")
+                
 
         }
     }

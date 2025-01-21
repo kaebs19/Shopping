@@ -49,7 +49,7 @@ enum Images: String, CaseIterable {
     case Fedex = "fedex"
     case Dhl = "dhl"
     case china_post = "china_post"
-    
+    case Setting = "setting"
     
     var names: String {
         return rawValue
